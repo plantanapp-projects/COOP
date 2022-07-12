@@ -66,7 +66,7 @@
       &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
       &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
       &lt;InputType&gt;static-text&lt;/InputType&gt;
-      &lt;InputData&gt;{&quot;Value&quot;:&quot;\n\u003cbody\u003e \n  \u003cdiv id=\&quot;module\&quot; class=\&quot;container\&quot;\u003e\n  \u003clabel  class=\&quot;form-label\&quot;\u003e\u003ch3\u003eSubject\u003c/h3\u003e\u003c/label\u003e\u003cbr\u003e\n  \u003cspan  class=\&quot;form-label\&quot;\u003e\u003ch3\u003e[PreInitQuerry:Subject]\u003c/h3\u003e\u003c/span\u003e\n    \n  \u003clabel  class=\&quot;form-label\&quot;\u003e\u003ch3\u003eMeeting Source\u003c/h3\u003e\u003c/label\u003e\u003cbr\u003e\n  \u003cspan  class=\&quot;form-label\&quot;\u003e\u003ch3\u003e[PreInitQuerry:Source]\u003c/h3\u003e\u003c/span\u003e\n    \n  \u003clabel  class=\&quot;form-label\&quot;\u003e\u003ch3\u003eStatus\u003c/h3\u003e\u003c/label\u003e\u003cbr\u003e\n  \u003cspan  class=\&quot;form-label\&quot;\u003e\u003ch3\u003e[PreInitQuerry:Status]\u003c/h3\u003e\u003c/span\u003e\n    \u003clabel  class=\&quot;form-label\&quot;\u003e\u003ch3\u003eParticipants\u003c/h3\u003e\u003c/label\u003e\u003cbr\u003e\n  \u003cspan  class=\&quot;form-label\&quot;\u003e\u003ch3\u003e[PreInitQuerry:ParticipantsList]\u003c/h3\u003e\u003c/span\u003e\n  \u003c/div\u003e\n\u003c/body\u003e \n    \n&quot;,&quot;Align&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;SaveToReport&quot;:false}&lt;/InputData&gt;
+      &lt;InputData&gt;{&quot;Value&quot;:&quot;\n\u003cbody\u003e \n  \u003cdiv id=\&quot;module\&quot; class=\&quot;container\&quot;\u003e\n  \u003clabel  class=\&quot;form-label\&quot;\u003e\u003ch3\u003eSubject\u003c/h3\u003e\u003c/label\u003e\u003cbr\u003e\n  \u003cspan  class=\&quot;form-label\&quot;\u003e\u003ch3\u003e[PreInitQuerry:Subject]\u003c/h3\u003e\u003c/span\u003e\n    \n  \u003clabel  class=\&quot;form-label\&quot;\u003e\u003ch3\u003eMeeting Source\u003c/h3\u003e\u003c/label\u003e\u003cbr\u003e\n  \u003cspan  class=\&quot;form-label\&quot;\u003e\u003ch3\u003e[PreInitQuerry:Source]\u003c/h3\u003e\u003c/span\u003e\n    \n  \u003clabel  class=\&quot;form-label\&quot;\u003e\u003ch3\u003eStatus\u003c/h3\u003e\u003c/label\u003e\u003cbr\u003e\n  \u003cspan  class=\&quot;form-label\&quot;\u003e\u003ch3\u003e[PreInitQuerry:Status]\u003c/h3\u003e\u003c/span\u003e\n    \u003clabel  class=\&quot;form-label\&quot;\u003e\u003ch3\u003eParticipants\u003c/h3\u003e\u003c/label\u003e\u003cbr\u003e\n  \u003cspan  class=\&quot;form-label\&quot;\u003e\u003ch3\u003e[PreInitQuerry:ParticipantsList]\u003c/h3\u003e\u003c/span\u003e\n    \u003clabel  class=\&quot;form-label\&quot;\u003e\u003ch3\u003eMeeting Link\u003c/h3\u003e\u003c/label\u003e\u003cbr\u003e\n  \u003cspan  class=\&quot;form-label\&quot;\u003e\u003ch3\u003e[PreInitQuerry:MeetingLink]\u003c/h3\u003e\u003c/span\u003e\n  \u003c/div\u003e\n\u003c/body\u003e \n    \n&quot;,&quot;Align&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;SaveToReport&quot;:false}&lt;/InputData&gt;
       &lt;Align&gt;
         &lt;Expression /&gt;
         &lt;Value&gt;left&lt;/Value&gt;
@@ -87,6 +87,8 @@
   &lt;span  class=&quot;form-label&quot;&gt;&lt;h3&gt;[PreInitQuerry:Status]&lt;/h3&gt;&lt;/span&gt;
     &lt;label  class=&quot;form-label&quot;&gt;&lt;h3&gt;Participants&lt;/h3&gt;&lt;/label&gt;&lt;br&gt;
   &lt;span  class=&quot;form-label&quot;&gt;&lt;h3&gt;[PreInitQuerry:ParticipantsList]&lt;/h3&gt;&lt;/span&gt;
+    &lt;label  class=&quot;form-label&quot;&gt;&lt;h3&gt;Meeting Link&lt;/h3&gt;&lt;/label&gt;&lt;br&gt;
+  &lt;span  class=&quot;form-label&quot;&gt;&lt;h3&gt;[PreInitQuerry:MeetingLink]&lt;/h3&gt;&lt;/span&gt;
   &lt;/div&gt;
 &lt;/body&gt; 
     
@@ -369,7 +371,7 @@
     &lt;BaseId&gt;dnn719&lt;/BaseId&gt;
     &lt;PopupName&gt;Meeting Informations&lt;/PopupName&gt;
     &lt;RootClasses /&gt;
-    &lt;LocalizedStringsUrl&gt;/DesktopModules/DnnSharp/ActionForm/AdminApi.ashx?method=GetLocalization&amp;amp;locale=en-US&amp;amp;section=FrontEnd&lt;/LocalizedStringsUrl&gt;
+    &lt;LocalizedStringsUrl&gt;/DesktopModules/DnnSharp/ActionForm/AdminApi.ashx?method=GetLocalization&amp;amp;locale=en&amp;amp;section=FrontEnd&lt;/LocalizedStringsUrl&gt;
     &lt;PortalHomeUrl&gt;/Portals/0/&lt;/PortalHomeUrl&gt;
   &lt;/Settings&gt;
   &lt;Actions xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
@@ -377,8 +379,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;CloseAFPopup&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:29.033&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;f661eca6-5e61-4cfc-8cd8-7de40e2a9d7f&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;FieldName&gt;Close&lt;/FieldName&gt;
@@ -390,8 +392,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:29.033&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;SELECT M.Date, MSE.Name as Source, MS.Name as Status, M.MeetingLink, M.Subject, Owner.DisplayName as Owner, \n(Select COUNT(UserId) from app.MeetingUserMentor where MeetingId = M.Id) as Participants,\nSTRING_AGG ( U.DisplayName,&#39;, &#39;) as ParticipantsList\nFROM app.Meeting M\ninner join app.MeetingUserMentor MUM on MUM.MeetingId = M.Id \ninner join dbo.Users U on U.UserId = MUM.UserId\ninner join dbo.Users as Owner on Owner.UserId = M.CreatedBy\nleft join app.MeetStatusUser MSU on MSU.MeetingId = M.Id and MSU.Users = @UserId \nleft join app.MeetingStatus MS on MS.Id = MSU.StatusId\nleft join app.MeetingMeetingSourceMeetingSource MMSMS on MMSMS.MeetingId = M.Id\nleft join app.MeetingSource MSE on MSE.Id = MMSMS.MeetingSourceId\nWhere M.Id = @meetingId\nGroup By M.Id, M.Date, MSE.Name, MS.Name, M.MeetingLink, M.Subject, Owner.DisplayName\n&quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[QueryString:meetingId]&quot;,&quot;name&quot;:&quot;meetingId&quot;},{&quot;value&quot;:&quot;[User:userId]&quot;,&quot;name&quot;:&quot;userId&quot;}],&quot;OutputTokenName&quot;:&quot;PreInitQuerry&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;EventName&gt;preinit&lt;/EventName&gt;
@@ -402,8 +404,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:28.953&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;SELECT Id from app.MeetStatusUser\nwhere users = @userId and meetingId = @meetingId &quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[QueryString:meetingId]&quot;,&quot;name&quot;:&quot;meetingId&quot;},{&quot;value&quot;:&quot;[User:userId]&quot;,&quot;name&quot;:&quot;userId&quot;}],&quot;OutputTokenName&quot;:&quot;MeetStatusUserId&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;FieldName&gt;Accept&lt;/FieldName&gt;
@@ -415,8 +417,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:29&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;SELECT Id from app.MeetStatusUser\nwhere users = @userId and meetingId = @meetingId &quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[QueryString:meetingId]&quot;,&quot;name&quot;:&quot;meetingId&quot;},{&quot;value&quot;:&quot;[User:userId]&quot;,&quot;name&quot;:&quot;userId&quot;}],&quot;OutputTokenName&quot;:&quot;MeetStatusUserId&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;FieldName&gt;Decline&lt;/FieldName&gt;
@@ -428,8 +430,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;PlantAnApp.PartialUpdateEntity.acd44ac7-d1cb-4123-8aee-7e9afaf0689f&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:28.97&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;RecordId&quot;:&quot;[MeetStatusUserId]&quot;,&quot;UpdatedProperties&quot;:[{&quot;PropertyName&quot;:{&quot;Value&quot;:&quot;StatusId&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;PropertyValue&quot;:{&quot;Value&quot;:&quot;1&quot;,&quot;IsExpression&quot;:false}}],&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;FieldName&gt;Accept&lt;/FieldName&gt;
@@ -441,8 +443,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;PlantAnApp.PartialUpdateEntity.acd44ac7-d1cb-4123-8aee-7e9afaf0689f&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:29&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;RecordId&quot;:&quot;[MeetStatusUserId]&quot;,&quot;UpdatedProperties&quot;:[{&quot;PropertyName&quot;:{&quot;Value&quot;:&quot;StatusId&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;PropertyValue&quot;:{&quot;Value&quot;:&quot;2&quot;,&quot;IsExpression&quot;:false}}],&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;FieldName&gt;Decline&lt;/FieldName&gt;
@@ -454,8 +456,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RefreshGrid&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:28.97&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;282b229b-4443-4901-baf9-e86db5c0930d&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;FieldName&gt;Accept&lt;/FieldName&gt;
@@ -467,8 +469,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RefreshGrid&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:29.017&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;282b229b-4443-4901-baf9-e86db5c0930d&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;FieldName&gt;Decline&lt;/FieldName&gt;
@@ -480,8 +482,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;CloseAFPopup&lt;/ActionType&gt;
       &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:28.97&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;f661eca6-5e61-4cfc-8cd8-7de40e2a9d7f&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;FieldName&gt;Accept&lt;/FieldName&gt;
@@ -493,8 +495,8 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;CloseAFPopup&lt;/ActionType&gt;
       &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-11T13:20:09.78&lt;/LastModified&gt;
-      &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
+      &lt;LastModified&gt;2022-07-12T09:33:29.017&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;f661eca6-5e61-4cfc-8cd8-7de40e2a9d7f&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
       &lt;FieldName&gt;Decline&lt;/FieldName&gt;
