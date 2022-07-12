@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 5,
+    "UniqueId": "04fc0b77-f588-40b4-9ad3-c8201d3aac30",
+    "EntityVersionId": 3,
+    "RelationName": "Files",
+    "OrderIndex": 3
+  },
+  {
+    "Id": 6,
+    "UniqueId": "0db6ff5e-0296-481e-8879-bfa93f60466d",
+    "EntityVersionId": 1,
+    "RelationName": "ReadBy",
+    "OrderIndex": 4
+  }
+]
