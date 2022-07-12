@@ -173,9 +173,9 @@
       &lt;ValidationGroup /&gt;
       &lt;GroupValidator /&gt;
       &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
-      &lt;ViewOrder&gt;1&lt;/ViewOrder&gt;
+      &lt;ViewOrder&gt;12&lt;/ViewOrder&gt;
       &lt;RowIndex&gt;1&lt;/RowIndex&gt;
-      &lt;ColSpan&gt;12&lt;/ColSpan&gt;
+      &lt;ColSpan&gt;6&lt;/ColSpan&gt;
       &lt;ColOffset&gt;0&lt;/ColOffset&gt;
     &lt;/Field&gt;
     &lt;Field&gt;
@@ -242,9 +242,9 @@
       &lt;ValidationGroup /&gt;
       &lt;GroupValidator /&gt;
       &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
-      &lt;ViewOrder&gt;2&lt;/ViewOrder&gt;
-      &lt;RowIndex&gt;2&lt;/RowIndex&gt;
-      &lt;ColSpan&gt;12&lt;/ColSpan&gt;
+      &lt;ViewOrder&gt;18&lt;/ViewOrder&gt;
+      &lt;RowIndex&gt;1&lt;/RowIndex&gt;
+      &lt;ColSpan&gt;6&lt;/ColSpan&gt;
       &lt;ColOffset&gt;0&lt;/ColOffset&gt;
     &lt;/Field&gt;
     &lt;Field&gt;
@@ -311,8 +311,8 @@
       &lt;ValidationGroup /&gt;
       &lt;GroupValidator /&gt;
       &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
-      &lt;ViewOrder&gt;3&lt;/ViewOrder&gt;
-      &lt;RowIndex&gt;3&lt;/RowIndex&gt;
+      &lt;ViewOrder&gt;24&lt;/ViewOrder&gt;
+      &lt;RowIndex&gt;2&lt;/RowIndex&gt;
       &lt;ColSpan&gt;12&lt;/ColSpan&gt;
       &lt;ColOffset&gt;0&lt;/ColOffset&gt;
     &lt;/Field&gt;
@@ -377,7 +377,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;CloseAFPopup&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.493&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.78&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;f661eca6-5e61-4cfc-8cd8-7de40e2a9d7f&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
@@ -390,7 +390,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.493&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.78&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;SELECT M.Date, MSE.Name as Source, MS.Name as Status, M.MeetingLink, M.Subject, Owner.DisplayName as Owner, \n(Select COUNT(UserId) from app.MeetingUserMentor where MeetingId = M.Id) as Participants,\nSTRING_AGG ( U.DisplayName,&#39;, &#39;) as ParticipantsList\nFROM app.Meeting M\ninner join app.MeetingUserMentor MUM on MUM.MeetingId = M.Id \ninner join dbo.Users U on U.UserId = MUM.UserId\ninner join dbo.Users as Owner on Owner.UserId = M.CreatedBy\nleft join app.MeetStatusUser MSU on MSU.MeetingId = M.Id and MSU.Users = @UserId \nleft join app.MeetingStatus MS on MS.Id = MSU.StatusId\nleft join app.MeetingMeetingSourceMeetingSource MMSMS on MMSMS.MeetingId = M.Id\nleft join app.MeetingSource MSE on MSE.Id = MMSMS.MeetingSourceId\nWhere M.Id = @meetingId\nGroup By M.Id, M.Date, MSE.Name, MS.Name, M.MeetingLink, M.Subject, Owner.DisplayName\n&quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[QueryString:meetingId]&quot;,&quot;name&quot;:&quot;meetingId&quot;},{&quot;value&quot;:&quot;[User:userId]&quot;,&quot;name&quot;:&quot;userId&quot;}],&quot;OutputTokenName&quot;:&quot;PreInitQuerry&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
@@ -402,7 +402,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.46&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.75&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;SELECT Id from app.MeetStatusUser\nwhere users = @userId and meetingId = @meetingId &quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[QueryString:meetingId]&quot;,&quot;name&quot;:&quot;meetingId&quot;},{&quot;value&quot;:&quot;[User:userId]&quot;,&quot;name&quot;:&quot;userId&quot;}],&quot;OutputTokenName&quot;:&quot;MeetStatusUserId&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
@@ -415,7 +415,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.493&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.78&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;SELECT Id from app.MeetStatusUser\nwhere users = @userId and meetingId = @meetingId &quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[QueryString:meetingId]&quot;,&quot;name&quot;:&quot;meetingId&quot;},{&quot;value&quot;:&quot;[User:userId]&quot;,&quot;name&quot;:&quot;userId&quot;}],&quot;OutputTokenName&quot;:&quot;MeetStatusUserId&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
@@ -428,7 +428,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;PlantAnApp.PartialUpdateEntity.acd44ac7-d1cb-4123-8aee-7e9afaf0689f&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.477&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.767&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;RecordId&quot;:&quot;[MeetStatusUserId]&quot;,&quot;UpdatedProperties&quot;:[{&quot;PropertyName&quot;:{&quot;Value&quot;:&quot;StatusId&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;PropertyValue&quot;:{&quot;Value&quot;:&quot;1&quot;,&quot;IsExpression&quot;:false}}],&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
@@ -441,7 +441,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;PlantAnApp.PartialUpdateEntity.acd44ac7-d1cb-4123-8aee-7e9afaf0689f&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.493&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.78&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;RecordId&quot;:&quot;[MeetStatusUserId]&quot;,&quot;UpdatedProperties&quot;:[{&quot;PropertyName&quot;:{&quot;Value&quot;:&quot;StatusId&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;PropertyValue&quot;:{&quot;Value&quot;:&quot;2&quot;,&quot;IsExpression&quot;:false}}],&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
@@ -454,7 +454,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RefreshGrid&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.477&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.767&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;282b229b-4443-4901-baf9-e86db5c0930d&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
@@ -467,7 +467,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RefreshGrid&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.493&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.78&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;282b229b-4443-4901-baf9-e86db5c0930d&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
@@ -480,7 +480,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;CloseAFPopup&lt;/ActionType&gt;
       &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.477&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.767&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;f661eca6-5e61-4cfc-8cd8-7de40e2a9d7f&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
@@ -493,7 +493,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;CloseAFPopup&lt;/ActionType&gt;
       &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T09:42:53.493&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T09:43:47.78&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;5&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;f661eca6-5e61-4cfc-8cd8-7de40e2a9d7f&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;719&lt;/ModuleId&gt;
