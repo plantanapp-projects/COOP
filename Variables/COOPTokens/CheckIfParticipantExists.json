@@ -1,0 +1,21 @@
+{
+  "id": 10,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "COOPTokens"
+  },
+  "name": "CheckIfParticipantExists",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "declare @projectId INT = '[TknParams:projectId]'\r\ndeclare @userId INT = '[TknParams:userId]'\r\n\r\nselect IIF(COUNT(ParticipantId) > 0, 1, 0) from app.ProjectParticipantParticipants PPP\r\ninner join app.Participant P on P.Id = PPP.ParticipantId\r\ninner join dbo.Users U on U.UserId = P.Name\r\ninner join app.Project PR on PR.Id = PPP.ProjectId\r\nwhere ProjectId = @projectId AND P.Name = @userId",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
