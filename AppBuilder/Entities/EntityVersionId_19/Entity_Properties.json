@@ -1,0 +1,48 @@
+[
+  {
+    "Id": 39,
+    "UniqueId": "0c50a9b8-baea-4599-b7b2-902c619ac046",
+    "EntityVersionId": 19,
+    "Name": "Title",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": true,
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
+    "OrderIndex": 1
+  },
+  {
+    "Id": 45,
+    "UniqueId": "5607cadb-b4e6-4a28-9a61-bf05f389365b",
+    "EntityVersionId": 19,
+    "Name": "Content",
+    "Type": {
+      "Id": "LargeText",
+      "Name": "Large Text",
+      "InputType": {
+        "Id": "LargeText",
+        "Name": "Large Text",
+        "ValueType": "String",
+        "Length": 2147483647,
+        "Icon": "notes"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": true,
+    "IsSearchable": true,
+    "IsFilterable": true,
+    "IsSortable": true,
+    "OrderIndex": 2
+  }
+]
