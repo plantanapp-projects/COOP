@@ -1,0 +1,21 @@
+{
+  "id": 38,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "COOPTokens"
+  },
+  "name": "GetCreatedBySameAsLoggedUser",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "declare @projectId INT = [TknParams:projectId]\r\ndeclare @loggedUser INT = [TknParams:userId]\r\n\r\nselect IIF(P.CreatedBy = @loggedUser, 1, 0) from app.Project P\r\ninner join dbo.Users U on U.UserId = P.CreatedBy\r\nwhere P.Id = @projectId and  P.CreatedBy = @loggedUser",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
