@@ -474,7 +474,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;PlantAnApp.UpdateEntity.5396218f-a236-45ec-af58-57bcf2b1b625&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T10:00:07.603&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T10:33:08.287&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;RecordId&quot;:&quot;[QueryString:articleId]&quot;,&quot;Title&quot;:&quot;[Title]&quot;,&quot;Content&quot;:&quot;[Content]&quot;,&quot;Type&quot;:&quot;[Type]&quot;,&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;506&lt;/ModuleId&gt;
@@ -487,7 +487,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
       &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T10:00:07.617&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T10:33:08.303&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;select A.Title, A.Content, A.Type, A.Id FROM app.Article A \n WHERE A.Id = @articleId&quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[QueryString:articleId]&quot;,&quot;name&quot;:&quot;articleId&quot;}],&quot;OutputTokenName&quot;:&quot;PreInitQuerry&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
       &lt;ModuleId&gt;506&lt;/ModuleId&gt;
@@ -499,7 +499,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;PlantAnApp.CreateEntity.eaa386f1-c7b9-4c24-b22f-9becc4e79625&lt;/ActionType&gt;
       &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T10:00:07.603&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T10:33:08.287&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;Title&quot;:&quot;[Title]&quot;,&quot;Content&quot;:&quot;[Content]&quot;,&quot;Type&quot;:&quot;[Type]&quot;,&quot;OutputToken&quot;:&quot;ArticleChangeId&quot;,&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;506&lt;/ModuleId&gt;
@@ -512,7 +512,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;PlantAnApp.LinkChildEntity.5396218f-a236-45ec-af58-57bcf2b1b625520bae77-3924-495d-aaa5-e6a355095189&lt;/ActionType&gt;
       &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T10:00:07.603&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T10:33:08.303&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;ParentRecordId&quot;:&quot;[QueryString:OpenArticleId]&quot;,&quot;ChildRecordId&quot;:&quot;[ArticleChangeId]&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;506&lt;/ModuleId&gt;
@@ -525,7 +525,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;LoadEntitiesFromJson&lt;/ActionType&gt;
       &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T10:00:07.603&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T10:33:08.303&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;JsonModel&quot;:&quot;[Files:FilesInfoJson]&quot;,&quot;EntityName&quot;:&quot;Files_filesInfoJson&quot;,&quot;OnError&quot;:[],&quot;EnforceISODateTime&quot;:&quot;&quot;}&lt;/ActionData&gt;
       &lt;ModuleId&gt;506&lt;/ModuleId&gt;
@@ -538,9 +538,9 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;ExecuteActionsOnEntityList&lt;/ActionType&gt;
       &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T10:00:07.603&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T10:33:08.303&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
-      &lt;ActionData&gt;{&quot;EntityName&quot;:&quot;Files_filesInfoJson&quot;,&quot;Filters&quot;:&quot;&quot;,&quot;ContextBehavior&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;NoPreserve&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ActionList&quot;:[{&quot;Id&quot;:-1,&quot;$_uid&quot;:&quot;action16576200049115321&quot;,&quot;EventName&quot;:&quot;click&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;ParentRecordId&quot;:&quot;[OpenArticleId=]&quot;,&quot;ChildRecordId&quot;:&quot;[Files_filesInfoJson:FileId]&quot;},&quot;ActionType&quot;:&quot;PlantAnApp.LinkChildEntity.5396218f-a236-45ec-af58-57bcf2b1b6253d7accda-87d6-46e8-8cc1-9688562e59e3&quot;,&quot;$_isOpen&quot;:false,&quot;$_isLoaded&quot;:true,&quot;$_isFocus&quot;:true,&quot;Definition&quot;:{&quot;IsClientAction&quot;:false,&quot;Settings&quot;:{&quot;Group&quot;:&quot;Entities&quot;,&quot;EntityVersionId&quot;:&quot;12&quot;,&quot;RelationId&quot;:&quot;3&quot;}}},{&quot;Id&quot;:-1,&quot;$_uid&quot;:&quot;action16576200049116924&quot;,&quot;EventName&quot;:&quot;click&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;ParentRecordId&quot;:&quot;[QueryString:OpenArticleId=]&quot;,&quot;ChildRecordId&quot;:&quot;[Files_filesInfoJson:FileId]&quot;},&quot;ActionType&quot;:&quot;PlantAnApp.LinkChildEntity.5396218f-a236-45ec-af58-57bcf2b1b6253d7accda-87d6-46e8-8cc1-9688562e59e3&quot;,&quot;$_isOpen&quot;:false,&quot;$_isLoaded&quot;:true,&quot;$_isFocus&quot;:true,&quot;Definition&quot;:{&quot;IsClientAction&quot;:false,&quot;Settings&quot;:{&quot;Group&quot;:&quot;Entities&quot;,&quot;EntityVersionId&quot;:&quot;12&quot;,&quot;RelationId&quot;:&quot;3&quot;}},&quot;Description&quot;:&quot;&quot;,&quot;Condition&quot;:&quot;&quot;}],&quot;ContinueOnError&quot;:&quot;&quot;,&quot;OnError&quot;:[]}&lt;/ActionData&gt;
+      &lt;ActionData&gt;{&quot;EntityName&quot;:&quot;Files_filesInfoJson&quot;,&quot;Filters&quot;:&quot;&quot;,&quot;ContextBehavior&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;NoPreserve&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ActionList&quot;:[{&quot;Id&quot;:-1,&quot;$_uid&quot;:&quot;action16576219828663461&quot;,&quot;EventName&quot;:&quot;click&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;ParentRecordId&quot;:&quot;[OpenArticleId=]&quot;,&quot;ChildRecordId&quot;:&quot;[Files_filesInfoJson:FileId]&quot;},&quot;ActionType&quot;:&quot;PlantAnApp.LinkChildEntity.5396218f-a236-45ec-af58-57bcf2b1b6253d7accda-87d6-46e8-8cc1-9688562e59e3&quot;,&quot;$_isOpen&quot;:false,&quot;$_isLoaded&quot;:true,&quot;$_isFocus&quot;:true,&quot;Definition&quot;:{&quot;IsClientAction&quot;:false,&quot;Settings&quot;:{&quot;Group&quot;:&quot;Entities&quot;,&quot;EntityVersionId&quot;:&quot;12&quot;,&quot;RelationId&quot;:&quot;3&quot;}},&quot;Description&quot;:&quot;For Create&quot;,&quot;Condition&quot;:&quot;0&quot;},{&quot;Id&quot;:-1,&quot;$_uid&quot;:&quot;action16576219828663367&quot;,&quot;EventName&quot;:&quot;click&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;ParentRecordId&quot;:&quot;[QueryString:OpenArticleId=]&quot;,&quot;ChildRecordId&quot;:&quot;[Files_filesInfoJson:FileId]&quot;},&quot;ActionType&quot;:&quot;PlantAnApp.LinkChildEntity.5396218f-a236-45ec-af58-57bcf2b1b6253d7accda-87d6-46e8-8cc1-9688562e59e3&quot;,&quot;$_isOpen&quot;:false,&quot;$_isLoaded&quot;:true,&quot;$_isFocus&quot;:true,&quot;Definition&quot;:{&quot;IsClientAction&quot;:false,&quot;Settings&quot;:{&quot;Group&quot;:&quot;Entities&quot;,&quot;EntityVersionId&quot;:&quot;12&quot;,&quot;RelationId&quot;:&quot;3&quot;}},&quot;Description&quot;:&quot;For Update&quot;,&quot;Condition&quot;:&quot;&quot;}],&quot;ContinueOnError&quot;:&quot;&quot;,&quot;OnError&quot;:[]}&lt;/ActionData&gt;
       &lt;ModuleId&gt;506&lt;/ModuleId&gt;
       &lt;FieldName&gt;Update&lt;/FieldName&gt;
       &lt;EventName&gt;click&lt;/EventName&gt;
@@ -551,7 +551,7 @@
       &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
       &lt;ActionType&gt;RefreshGrid&lt;/ActionType&gt;
       &lt;OrderIndex&gt;5&lt;/OrderIndex&gt;
-      &lt;LastModified&gt;2022-07-12T10:00:07.603&lt;/LastModified&gt;
+      &lt;LastModified&gt;2022-07-12T10:33:08.303&lt;/LastModified&gt;
       &lt;LastModifiedBy&gt;1&lt;/LastModifiedBy&gt;
       &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;71bd6b79-ecf7-4d0f-bc21-9c90495f0bbd&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
       &lt;ModuleId&gt;506&lt;/ModuleId&gt;
