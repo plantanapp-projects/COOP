@@ -1,0 +1,24 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@{
+ var ListofVoters = COOPTokens.ShowVoters();
+}
+
+
+  @foreach(var a in ListofVoters) {
+    
+    <p> @a.Voters </p> 
+ 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
