@@ -1,0 +1,87 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@{
+    var Question = COOPTokens.GetQuestion();
+}
+
+  @foreach(var a in Question) {
+     
+      <div class="question">
+          <div class="line"> 
+           <h4>@a.Description</h4><br>
+           <i>Created By:@a.CreatedBy</i> <br>
+           <i>Date: @a.Date</i> <br><br> <br>
+           <button id="qbtn" class="btn btn-primary bluebtn btn-sm myqbutton">Answer Question</button>
+            <button id="scheduleBtn" class="btn btn-primary bluebtn btn-sm myqbutton">Schedule Meeting &#9742;</button>
+          </div>
+      </div>
+  }
+
+
+<script>
+     var myBtn = document.getElementById("qbtn")
+          myBtn.addEventListener('click', (e) => {
+          dnnsf.api.actionForm.openPopupById("636") 
+          e.preventDefault();
+     })
+      var scheduleBtn = document.getElementById("scheduleBtn")
+          scheduleBtn.addEventListener('click', (e) => {
+          dnnsf.api.actionForm.openPopupById("674")
+          e.preventDefault();
+     })
+   
+</script>
+
+<style>
+    .myqbutton {
+        padding: 10px;
+        width: 200px;
+        font-size: 14px;
+    }
+    .myqbutton:hover {
+        background-color:#0E2936 !important;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
