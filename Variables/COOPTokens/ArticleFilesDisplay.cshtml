@@ -1,17 +1,16 @@
 @inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
 @{
  var ArticleFiles = COOPTokens.ArticleFiles(ArticleId:TknParams.ArticleId.Value.ToString(),ArticleChangeId:TknParams.ArticleChangeId.Value.ToString());
+ var numOfFiles = ArticleFiles.Count();
 }
 
-
-    <h5>
-        Current Files
-    </h5>
+    <h5>@numOfFiles Files</h5>
 
     <div class="files-wrapper">
-        @if (ArticleFiles.Count() == 0) {
-            <h5>No Files</h5>
-        } 
-          
+          @foreach(var f in ArticleFiles){
+                <a class="f-item" href=#>
+          		    <p>@f.FileName</p>
+          	    </a>
+            }
         
     </div>
