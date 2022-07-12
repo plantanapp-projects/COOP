@@ -1,0 +1,117 @@
+{
+  "Name": "Meeting",
+  "Description": "Creates a new record of type Meeting",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 81,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Input": [
+    {
+      "Name": "Date",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "MeetingLink",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Subject",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"Subject is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.0a8a310b-a82e-40e0-a9ab-efa1c0f91d31",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "Date": "[Date]",
+        "MeetingLink": "[MeetingLink]",
+        "Subject": "[Subject]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "0a8a310b-a82e-40e0-a9ab-efa1c0f91d31"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.0a8a310b-a82e-40e0-a9ab-efa1c0f91d31",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "0a8a310b-a82e-40e0-a9ab-efa1c0f91d31"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "Date",
+            "value": "[CreatedRecord:Date]"
+          },
+          {
+            "name": "MeetingLink",
+            "value": "[CreatedRecord:MeetingLink]"
+          },
+          {
+            "name": "Subject",
+            "value": "[CreatedRecord:Subject]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://coopv2.apps.plantanapp.com/api/Meeting?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
