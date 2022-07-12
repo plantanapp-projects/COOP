@@ -1,6 +1,6 @@
 @inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
 @{
- var ArticleFiles = COOPTokens.ArticleFiles(OpenArticleId:[QueryString:OpenArticleId]);
+ var ArticleFiles = COOPTokens.ArticleFiles(OpenArticleId:TknParams.OpenArticleId.Value.ToString());
 }
 
 
