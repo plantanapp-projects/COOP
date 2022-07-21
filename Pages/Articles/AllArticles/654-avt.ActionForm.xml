@@ -1,0 +1,530 @@
+<module type="ActionForm" version="05.20.157.00">
+    <contentKey />
+    <moduleID>654</moduleID>
+    <alignment />
+    <alltabs>false</alltabs>
+    <border />
+    <cachemethod />
+    <cachetime>0</cachetime>
+    <color />
+    <containersrc />
+    <displayprint>false</displayprint>
+    <displaysyndicate>false</displaysyndicate>
+    <displaytitle>true</displaytitle>
+    <enddate>0001-01-01T00:00:00</enddate>
+    <footer />
+    <header />
+    <iconfile />
+    <inheritviewpermissions>true</inheritviewpermissions>
+    <modulepermissions>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>All Users</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Administrators</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Low-Code Engineer</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Admins</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Citizen Developers</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Users</rolename>
+        </permission>
+    </modulepermissions>
+    <title>Article Details Form</title>
+    <startdate>0001-01-01T00:00:00</startdate>
+    <uniqueId>762f105f-c6df-41f5-9615-b4de881bb9e1</uniqueId>
+    <visibility>Maximized</visibility>
+    <cultureCode />
+    <modulesettings />
+    <tabmodulesettings />
+    <definition>Action Form</definition>
+    <moduledefinition>avt.Action Form</moduledefinition>
+    <content type="ActionForm" version="05.20.157.00"><![CDATA[&lt;ActionForm&gt;
+  &lt;Fields&gt;
+    &lt;Field&gt;
+      &lt;Id&gt;&lt;![CDATA[479]]&gt;&lt;/Id&gt;
+      &lt;Title&gt;&lt;![CDATA[Title]]&gt;&lt;/Title&gt;
+      &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
+      &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
+      &lt;MetadataJson&gt;&lt;![CDATA[{}]]&gt;&lt;/MetadataJson&gt;
+      &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
+      &lt;OverrideName /&gt;
+      &lt;Name&gt;Title&lt;/Name&gt;
+      &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
+      &lt;ShowCondition&gt;&lt;![CDATA[]]&gt;&lt;/ShowCondition&gt;
+      &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
+      &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
+      &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
+      &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
+      &lt;BindPreserveLayout&gt;&lt;![CDATA[False]]&gt;&lt;/BindPreserveLayout&gt;
+      &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
+      &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
+      &lt;InputType&gt;static-text&lt;/InputType&gt;
+      &lt;InputData&gt;{&quot;Value&quot;:&quot;\u003cp class=\&quot;my-title\&quot;\u003eTitle\u003c/p\u003e\n[PreInitQuerry:Title]\n\n\u003cstyle\u003e\n  .my-title {\n    color: #22577e;\n    font-weight:bold;\n  }\n\u003c/style\u003e&quot;,&quot;Align&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;SaveToReport&quot;:false}&lt;/InputData&gt;
+      &lt;Align&gt;
+        &lt;Expression /&gt;
+        &lt;Value&gt;left&lt;/Value&gt;
+        &lt;IsExpression&gt;False&lt;/IsExpression&gt;
+        &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
+      &lt;/Align&gt;
+      &lt;SaveToReport&gt;False&lt;/SaveToReport&gt;
+      &lt;Value&gt;&lt;![CDATA[&lt;p class=&quot;my-title&quot;&gt;Title&lt;/p&gt;
+[PreInitQuerry:Title]
+
+&lt;style&gt;
+  .my-title {
+    color: #22577e;
+    font-weight:bold;
+  }
+&lt;/style&gt;]]&gt;&lt;/Value&gt;
+      &lt;IsRequired&gt;False&lt;/IsRequired&gt;
+      &lt;IsActive&gt;True&lt;/IsActive&gt;
+      &lt;EnableCondition /&gt;
+      &lt;CssClass&gt;&lt;![CDATA[]]&gt;&lt;/CssClass&gt;
+      &lt;FirstCssClass&gt;&lt;![CDATA[]]&gt;&lt;/FirstCssClass&gt;
+      &lt;CssStyles&gt;&lt;![CDATA[]]&gt;&lt;/CssStyles&gt;
+      &lt;LabelCssClass&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssClass&gt;
+      &lt;LabelCssStyles&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssStyles&gt;
+      &lt;CustomValidator1 /&gt;
+      &lt;CustomValidator2 /&gt;
+      &lt;ValidationGroup /&gt;
+      &lt;GroupValidator /&gt;
+      &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
+      &lt;ViewOrder&gt;0&lt;/ViewOrder&gt;
+      &lt;RowIndex&gt;0&lt;/RowIndex&gt;
+      &lt;ColSpan&gt;12&lt;/ColSpan&gt;
+      &lt;ColOffset&gt;0&lt;/ColOffset&gt;
+    &lt;/Field&gt;
+    &lt;Field&gt;
+      &lt;Id&gt;&lt;![CDATA[481]]&gt;&lt;/Id&gt;
+      &lt;Title&gt;&lt;![CDATA[Type]]&gt;&lt;/Title&gt;
+      &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
+      &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
+      &lt;MetadataJson&gt;&lt;![CDATA[{}]]&gt;&lt;/MetadataJson&gt;
+      &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
+      &lt;OverrideName /&gt;
+      &lt;Name&gt;Type&lt;/Name&gt;
+      &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
+      &lt;ShowCondition&gt;&lt;![CDATA[]]&gt;&lt;/ShowCondition&gt;
+      &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
+      &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
+      &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
+      &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
+      &lt;BindPreserveLayout&gt;&lt;![CDATA[False]]&gt;&lt;/BindPreserveLayout&gt;
+      &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
+      &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
+      &lt;InputType&gt;static-text&lt;/InputType&gt;
+      &lt;InputData&gt;{&quot;Value&quot;:&quot;\u003cp class=\&quot;my-type\&quot;\u003eType\u003c/p\u003e\n[PreInitQuerry:Name]\n\n\u003cstyle\u003e\n  .my-type {\n    color: #22577e;\n    font-weight:bold;\n  }\n\u003c/style\u003e&quot;,&quot;Align&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;SaveToReport&quot;:false}&lt;/InputData&gt;
+      &lt;Align&gt;
+        &lt;Expression /&gt;
+        &lt;Value&gt;left&lt;/Value&gt;
+        &lt;IsExpression&gt;False&lt;/IsExpression&gt;
+        &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
+      &lt;/Align&gt;
+      &lt;SaveToReport&gt;False&lt;/SaveToReport&gt;
+      &lt;Value&gt;&lt;![CDATA[&lt;p class=&quot;my-type&quot;&gt;Type&lt;/p&gt;
+[PreInitQuerry:Name]
+
+&lt;style&gt;
+  .my-type {
+    color: #22577e;
+    font-weight:bold;
+  }
+&lt;/style&gt;]]&gt;&lt;/Value&gt;
+      &lt;IsRequired&gt;False&lt;/IsRequired&gt;
+      &lt;IsActive&gt;True&lt;/IsActive&gt;
+      &lt;EnableCondition /&gt;
+      &lt;CssClass&gt;&lt;![CDATA[]]&gt;&lt;/CssClass&gt;
+      &lt;FirstCssClass&gt;&lt;![CDATA[]]&gt;&lt;/FirstCssClass&gt;
+      &lt;CssStyles&gt;&lt;![CDATA[]]&gt;&lt;/CssStyles&gt;
+      &lt;LabelCssClass&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssClass&gt;
+      &lt;LabelCssStyles&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssStyles&gt;
+      &lt;CustomValidator1 /&gt;
+      &lt;CustomValidator2 /&gt;
+      &lt;ValidationGroup /&gt;
+      &lt;GroupValidator /&gt;
+      &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
+      &lt;ViewOrder&gt;12&lt;/ViewOrder&gt;
+      &lt;RowIndex&gt;1&lt;/RowIndex&gt;
+      &lt;ColSpan&gt;12&lt;/ColSpan&gt;
+      &lt;ColOffset&gt;0&lt;/ColOffset&gt;
+    &lt;/Field&gt;
+    &lt;Field&gt;
+      &lt;Id&gt;&lt;![CDATA[480]]&gt;&lt;/Id&gt;
+      &lt;Title&gt;&lt;![CDATA[Content]]&gt;&lt;/Title&gt;
+      &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
+      &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
+      &lt;MetadataJson&gt;&lt;![CDATA[{}]]&gt;&lt;/MetadataJson&gt;
+      &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
+      &lt;OverrideName /&gt;
+      &lt;Name&gt;Content&lt;/Name&gt;
+      &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
+      &lt;ShowCondition&gt;&lt;![CDATA[]]&gt;&lt;/ShowCondition&gt;
+      &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
+      &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
+      &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
+      &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
+      &lt;BindPreserveLayout&gt;&lt;![CDATA[False]]&gt;&lt;/BindPreserveLayout&gt;
+      &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
+      &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
+      &lt;InputType&gt;static-text&lt;/InputType&gt;
+      &lt;InputData&gt;{&quot;Value&quot;:&quot;\u003cdiv class=\&quot;content-wrapper\&quot;\u003e\n\t\u003cp class=\&quot;my-content\&quot;\u003eContent\u003c/p\u003e\n\t[PreInitQuerry:Content]\n\u003c/div\u003e\n\u003cstyle\u003e\n  .my-content {\n    color: #22577e;\n    font-weight:bold;\n  }\n  .content-wrapper {\n    height: 250px;\n    overflow: scroll;\n  }\n\u003c/style\u003e&quot;,&quot;Align&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;SaveToReport&quot;:false}&lt;/InputData&gt;
+      &lt;Align&gt;
+        &lt;Expression /&gt;
+        &lt;Value&gt;left&lt;/Value&gt;
+        &lt;IsExpression&gt;False&lt;/IsExpression&gt;
+        &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
+      &lt;/Align&gt;
+      &lt;SaveToReport&gt;False&lt;/SaveToReport&gt;
+      &lt;Value&gt;&lt;![CDATA[&lt;div class=&quot;content-wrapper&quot;&gt;
+	&lt;p class=&quot;my-content&quot;&gt;Content&lt;/p&gt;
+	[PreInitQuerry:Content]
+&lt;/div&gt;
+&lt;style&gt;
+  .my-content {
+    color: #22577e;
+    font-weight:bold;
+  }
+  .content-wrapper {
+    height: 250px;
+    overflow: scroll;
+  }
+&lt;/style&gt;]]&gt;&lt;/Value&gt;
+      &lt;IsRequired&gt;False&lt;/IsRequired&gt;
+      &lt;IsActive&gt;True&lt;/IsActive&gt;
+      &lt;EnableCondition /&gt;
+      &lt;CssClass&gt;&lt;![CDATA[]]&gt;&lt;/CssClass&gt;
+      &lt;FirstCssClass&gt;&lt;![CDATA[]]&gt;&lt;/FirstCssClass&gt;
+      &lt;CssStyles&gt;&lt;![CDATA[]]&gt;&lt;/CssStyles&gt;
+      &lt;LabelCssClass&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssClass&gt;
+      &lt;LabelCssStyles&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssStyles&gt;
+      &lt;CustomValidator1 /&gt;
+      &lt;CustomValidator2 /&gt;
+      &lt;ValidationGroup /&gt;
+      &lt;GroupValidator /&gt;
+      &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
+      &lt;ViewOrder&gt;24&lt;/ViewOrder&gt;
+      &lt;RowIndex&gt;2&lt;/RowIndex&gt;
+      &lt;ColSpan&gt;12&lt;/ColSpan&gt;
+      &lt;ColOffset&gt;0&lt;/ColOffset&gt;
+    &lt;/Field&gt;
+    &lt;Field&gt;
+      &lt;Id&gt;&lt;![CDATA[501]]&gt;&lt;/Id&gt;
+      &lt;Title&gt;&lt;![CDATA[Created by]]&gt;&lt;/Title&gt;
+      &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
+      &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
+      &lt;MetadataJson&gt;&lt;![CDATA[{}]]&gt;&lt;/MetadataJson&gt;
+      &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
+      &lt;OverrideName /&gt;
+      &lt;Name&gt;Createdby&lt;/Name&gt;
+      &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
+      &lt;ShowCondition&gt;&lt;![CDATA[]]&gt;&lt;/ShowCondition&gt;
+      &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
+      &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
+      &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
+      &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
+      &lt;BindPreserveLayout&gt;&lt;![CDATA[False]]&gt;&lt;/BindPreserveLayout&gt;
+      &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
+      &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
+      &lt;InputType&gt;static-text&lt;/InputType&gt;
+      &lt;InputData&gt;{&quot;Value&quot;:&quot;\u003cp class=\&quot;created-by\&quot;\u003eCreated by\u003c/p\u003e\n[PreInitQuerry:DisplayName]\n\n\u003cstyle\u003e\n  .created-by {\n    color: #22577e;\n    font-weight:bold;\n  }\n\u003c/style\u003e&quot;,&quot;Align&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;SaveToReport&quot;:false}&lt;/InputData&gt;
+      &lt;Align&gt;
+        &lt;Expression /&gt;
+        &lt;Value&gt;left&lt;/Value&gt;
+        &lt;IsExpression&gt;False&lt;/IsExpression&gt;
+        &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
+      &lt;/Align&gt;
+      &lt;SaveToReport&gt;False&lt;/SaveToReport&gt;
+      &lt;Value&gt;&lt;![CDATA[&lt;p class=&quot;created-by&quot;&gt;Created by&lt;/p&gt;
+[PreInitQuerry:DisplayName]
+
+&lt;style&gt;
+  .created-by {
+    color: #22577e;
+    font-weight:bold;
+  }
+&lt;/style&gt;]]&gt;&lt;/Value&gt;
+      &lt;IsRequired&gt;False&lt;/IsRequired&gt;
+      &lt;IsActive&gt;True&lt;/IsActive&gt;
+      &lt;EnableCondition /&gt;
+      &lt;CssClass&gt;&lt;![CDATA[]]&gt;&lt;/CssClass&gt;
+      &lt;FirstCssClass&gt;&lt;![CDATA[]]&gt;&lt;/FirstCssClass&gt;
+      &lt;CssStyles&gt;&lt;![CDATA[]]&gt;&lt;/CssStyles&gt;
+      &lt;LabelCssClass&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssClass&gt;
+      &lt;LabelCssStyles&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssStyles&gt;
+      &lt;CustomValidator1 /&gt;
+      &lt;CustomValidator2 /&gt;
+      &lt;ValidationGroup /&gt;
+      &lt;GroupValidator /&gt;
+      &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
+      &lt;ViewOrder&gt;36&lt;/ViewOrder&gt;
+      &lt;RowIndex&gt;3&lt;/RowIndex&gt;
+      &lt;ColSpan&gt;12&lt;/ColSpan&gt;
+      &lt;ColOffset&gt;0&lt;/ColOffset&gt;
+    &lt;/Field&gt;
+    &lt;Field&gt;
+      &lt;Id&gt;&lt;![CDATA[512]]&gt;&lt;/Id&gt;
+      &lt;Title&gt;&lt;![CDATA[Files]]&gt;&lt;/Title&gt;
+      &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
+      &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
+      &lt;MetadataJson&gt;&lt;![CDATA[{}]]&gt;&lt;/MetadataJson&gt;
+      &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
+      &lt;OverrideName /&gt;
+      &lt;Name&gt;Files&lt;/Name&gt;
+      &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
+      &lt;ShowCondition&gt;&lt;![CDATA[0]]&gt;&lt;/ShowCondition&gt;
+      &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
+      &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
+      &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
+      &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
+      &lt;BindPreserveLayout&gt;&lt;![CDATA[False]]&gt;&lt;/BindPreserveLayout&gt;
+      &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
+      &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
+      &lt;InputType&gt;static-text&lt;/InputType&gt;
+      &lt;InputData&gt;{&quot;Value&quot;:&quot;[COOPTokens:ArticleFilesDisplay(ArticleId=\&quot;[QueryString:articleId]\&quot;, ArticleChangeId=\&quot;-1\&quot;)]\n\n\u003cstyle\u003e\n        \n        .files-wrapper {\n            height: 200px!important;;\n            width: 100%;\n            display: flex;\n            flex-direction: column;\n            overflow: scroll;\n            row-gap: 5px;\n        }\n        \n        .file-wrapper {\n            display: flex;\n            width: 95%;\n            align-items: center;\n            justify-content: space-between;\n        }\n        \n        \n        \n        p {\n            margin: 0;\n        }\n  \n  \t\t.name {\n    \t\tmax-width: 155px;\n    \t\toverflow: hidden;\n  \t\t}\n        \n        a {\n            text-decoration: none;\n        }\n  \n  \t\t.image img {\n          \twidth: 50px;\n            height: 50px;\n    \t\tobject-fit: cover !important;\n  \t\t}\n        \n        \n    \u003c/style\u003e&quot;,&quot;Align&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;left&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;SaveToReport&quot;:false}&lt;/InputData&gt;
+      &lt;Align&gt;
+        &lt;Expression /&gt;
+        &lt;Value&gt;left&lt;/Value&gt;
+        &lt;IsExpression&gt;False&lt;/IsExpression&gt;
+        &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
+      &lt;/Align&gt;
+      &lt;SaveToReport&gt;False&lt;/SaveToReport&gt;
+      &lt;Value&gt;&lt;![CDATA[[COOPTokens:ArticleFilesDisplay(ArticleId=&quot;[QueryString:articleId]&quot;, ArticleChangeId=&quot;-1&quot;)]
+
+&lt;style&gt;
+        
+        .files-wrapper {
+            height: 200px!important;;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: scroll;
+            row-gap: 5px;
+        }
+        
+        .file-wrapper {
+            display: flex;
+            width: 95%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        
+        
+        p {
+            margin: 0;
+        }
+  
+  		.name {
+    		max-width: 155px;
+    		overflow: hidden;
+  		}
+        
+        a {
+            text-decoration: none;
+        }
+  
+  		.image img {
+          	width: 50px;
+            height: 50px;
+    		object-fit: cover !important;
+  		}
+        
+        
+    &lt;/style&gt;]]&gt;&lt;/Value&gt;
+      &lt;IsRequired&gt;False&lt;/IsRequired&gt;
+      &lt;IsActive&gt;True&lt;/IsActive&gt;
+      &lt;EnableCondition /&gt;
+      &lt;CssClass&gt;&lt;![CDATA[]]&gt;&lt;/CssClass&gt;
+      &lt;FirstCssClass&gt;&lt;![CDATA[]]&gt;&lt;/FirstCssClass&gt;
+      &lt;CssStyles&gt;&lt;![CDATA[]]&gt;&lt;/CssStyles&gt;
+      &lt;LabelCssClass&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssClass&gt;
+      &lt;LabelCssStyles&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssStyles&gt;
+      &lt;CustomValidator1 /&gt;
+      &lt;CustomValidator2 /&gt;
+      &lt;ValidationGroup /&gt;
+      &lt;GroupValidator /&gt;
+      &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
+      &lt;ViewOrder&gt;48&lt;/ViewOrder&gt;
+      &lt;RowIndex&gt;4&lt;/RowIndex&gt;
+      &lt;ColSpan&gt;12&lt;/ColSpan&gt;
+      &lt;ColOffset&gt;0&lt;/ColOffset&gt;
+    &lt;/Field&gt;
+    &lt;Field&gt;
+      &lt;Id&gt;&lt;![CDATA[482]]&gt;&lt;/Id&gt;
+      &lt;Title&gt;&lt;![CDATA[Close]]&gt;&lt;/Title&gt;
+      &lt;ShortDesc&gt;&lt;![CDATA[]]&gt;&lt;/ShortDesc&gt;
+      &lt;CustomAttributesJson&gt;&lt;![CDATA[[]]]&gt;&lt;/CustomAttributesJson&gt;
+      &lt;MetadataJson&gt;&lt;![CDATA[{}]]&gt;&lt;/MetadataJson&gt;
+      &lt;IsEnabled&gt;True&lt;/IsEnabled&gt;
+      &lt;OverrideName /&gt;
+      &lt;Name&gt;Close&lt;/Name&gt;
+      &lt;HelpText&gt;&lt;![CDATA[]]&gt;&lt;/HelpText&gt;
+      &lt;ShowCondition&gt;&lt;![CDATA[]]&gt;&lt;/ShowCondition&gt;
+      &lt;ValidationCondition&gt;&lt;![CDATA[]]&gt;&lt;/ValidationCondition&gt;
+      &lt;CanValidate&gt;&lt;![CDATA[True]]&gt;&lt;/CanValidate&gt;
+      &lt;BindShow&gt;&lt;![CDATA[]]&gt;&lt;/BindShow&gt;
+      &lt;BindEnable&gt;&lt;![CDATA[]]&gt;&lt;/BindEnable&gt;
+      &lt;BindPreserveLayout&gt;&lt;![CDATA[False]]&gt;&lt;/BindPreserveLayout&gt;
+      &lt;BindValue&gt;&lt;![CDATA[]]&gt;&lt;/BindValue&gt;
+      &lt;BindOnChange&gt;&lt;![CDATA[]]&gt;&lt;/BindOnChange&gt;
+      &lt;InputType&gt;button&lt;/InputType&gt;
+      &lt;InputData&gt;{&quot;CausesValidation&quot;:true,&quot;IsDefaultButton&quot;:true,&quot;ButtonSize&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-normal&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonType&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;btn-warning&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonAlign&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;center&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonIcon&quot;:&quot;&quot;,&quot;ButtonExecutingActionMessage&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;localize&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ButtonWaitingMessage&quot;:&quot;Please wait...&quot;,&quot;ConnectedForms&quot;:&quot;&quot;,&quot;Actions&quot;:[]}&lt;/InputData&gt;
+      &lt;CausesValidation&gt;True&lt;/CausesValidation&gt;
+      &lt;IsDefaultButton&gt;True&lt;/IsDefaultButton&gt;
+      &lt;ButtonSize&gt;
+        &lt;Expression /&gt;
+        &lt;Value&gt;btn-normal&lt;/Value&gt;
+        &lt;IsExpression&gt;False&lt;/IsExpression&gt;
+        &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
+      &lt;/ButtonSize&gt;
+      &lt;ButtonType&gt;
+        &lt;Expression /&gt;
+        &lt;Value&gt;btn-warning&lt;/Value&gt;
+        &lt;IsExpression&gt;False&lt;/IsExpression&gt;
+        &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
+      &lt;/ButtonType&gt;
+      &lt;ButtonAlign&gt;
+        &lt;Expression /&gt;
+        &lt;Value&gt;center&lt;/Value&gt;
+        &lt;IsExpression&gt;False&lt;/IsExpression&gt;
+        &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
+      &lt;/ButtonAlign&gt;
+      &lt;ButtonIcon /&gt;
+      &lt;ButtonExecutingActionMessage&gt;
+        &lt;Expression /&gt;
+        &lt;Value&gt;localize&lt;/Value&gt;
+        &lt;IsExpression&gt;False&lt;/IsExpression&gt;
+        &lt;Parameters&gt;System.Collections.Generic.Dictionary`2[System.String,System.Object]&lt;/Parameters&gt;
+      &lt;/ButtonExecutingActionMessage&gt;
+      &lt;ButtonWaitingMessage&gt;Please wait...&lt;/ButtonWaitingMessage&gt;
+      &lt;ConnectedForms /&gt;
+      &lt;Actions /&gt;
+      &lt;Value&gt;&lt;![CDATA[]]&gt;&lt;/Value&gt;
+      &lt;IsRequired&gt;False&lt;/IsRequired&gt;
+      &lt;IsActive&gt;True&lt;/IsActive&gt;
+      &lt;EnableCondition /&gt;
+      &lt;CssClass&gt;&lt;![CDATA[closebtn]]&gt;&lt;/CssClass&gt;
+      &lt;FirstCssClass&gt;&lt;![CDATA[closebtn]]&gt;&lt;/FirstCssClass&gt;
+      &lt;CssStyles&gt;&lt;![CDATA[width:50%;]]&gt;&lt;/CssStyles&gt;
+      &lt;LabelCssClass&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssClass&gt;
+      &lt;LabelCssStyles&gt;&lt;![CDATA[]]&gt;&lt;/LabelCssStyles&gt;
+      &lt;CustomValidator1 /&gt;
+      &lt;CustomValidator2 /&gt;
+      &lt;ValidationGroup /&gt;
+      &lt;GroupValidator /&gt;
+      &lt;DisableAutocomplete&gt;False&lt;/DisableAutocomplete&gt;
+      &lt;ViewOrder&gt;60&lt;/ViewOrder&gt;
+      &lt;RowIndex&gt;5&lt;/RowIndex&gt;
+      &lt;ColSpan&gt;12&lt;/ColSpan&gt;
+      &lt;ColOffset&gt;0&lt;/ColOffset&gt;
+    &lt;/Field&gt;
+  &lt;/Fields&gt;
+  &lt;Settings&gt;
+    &lt;Title&gt;Article Details Form&lt;/Title&gt;
+    &lt;CssName&gt;article-details-form&lt;/CssName&gt;
+    &lt;Version&gt;5.20.0&lt;/Version&gt;
+    &lt;Build&gt;5.20.157&lt;/Build&gt;
+    &lt;CultureCode&gt;en&lt;/CultureCode&gt;
+    &lt;RenderContext&gt;Form&lt;/RenderContext&gt;
+    &lt;FrontEndTemplate&gt;&amp;lt;p&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/p&amp;gt;&lt;/FrontEndTemplate&gt;
+    &lt;HasCustomLayout&gt;False&lt;/HasCustomLayout&gt;
+    &lt;ShowLoading&gt;False&lt;/ShowLoading&gt;
+    &lt;LoadingBarsColor&gt;#00c0ef&lt;/LoadingBarsColor&gt;
+    &lt;LoadingBackgroundColor&gt;#fff&lt;/LoadingBackgroundColor&gt;
+    &lt;LoadingText /&gt;
+    &lt;TabsProLoading&gt;False&lt;/TabsProLoading&gt;
+    &lt;LayoutHtml&gt;&lt;![CDATA[&amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;[Fields:Title][Fields:Type][Fields:Content][Fields:Createdby][Fields:Files]&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;[Fields:Close]&amp;lt;/div&amp;gt;]]&gt;&lt;/LayoutHtml&gt;
+    &lt;CurrentContext&gt;ExportImport&lt;/CurrentContext&gt;
+    &lt;LabelAlign&gt;top&lt;/LabelAlign&gt;
+    &lt;LabelWidth&gt;3&lt;/LabelWidth&gt;
+    &lt;FieldSpacing&gt;loose&lt;/FieldSpacing&gt;
+    &lt;OpenFormMode&gt;Popup&lt;/OpenFormMode&gt;
+    &lt;ModuleId&gt;654&lt;/ModuleId&gt;
+    &lt;ModuleVersion&gt;5.20.157&lt;/ModuleVersion&gt;
+    &lt;TabId&gt;67&lt;/TabId&gt;
+    &lt;ModuleBaseUrl&gt;/DesktopModules/DnnSharp/ActionForm&lt;/ModuleBaseUrl&gt;
+    &lt;ResourceBaseUrl&gt;/DesktopModules/DnnSharp/ActionForm/static&lt;/ResourceBaseUrl&gt;
+    &lt;FormTemplate&gt;bootstrap5&lt;/FormTemplate&gt;
+    &lt;FormTemplateFolder&gt;/DesktopModules/DnnSharp/ActionForm/templates/Form/bootstrap5&lt;/FormTemplateFolder&gt;
+    &lt;ModuleId&gt;654&lt;/ModuleId&gt;
+    &lt;IsDebug&gt;False&lt;/IsDebug&gt;
+    &lt;EnableReports&gt;False&lt;/EnableReports&gt;
+    &lt;ClientSideValidation&gt;True&lt;/ClientSideValidation&gt;
+    &lt;RequiredFieldAllowsWhiteSpace&gt;False&lt;/RequiredFieldAllowsWhiteSpace&gt;
+    &lt;OnFocusoutValidation&gt;False&lt;/OnFocusoutValidation&gt;
+    &lt;ShowTooltips&gt;False&lt;/ShowTooltips&gt;
+    &lt;ShowTooltipTitle&gt;True&lt;/ShowTooltipTitle&gt;
+    &lt;ShowFormCondition /&gt;
+    &lt;InitJs&gt;&lt;![CDATA[]]&gt;&lt;/InitJs&gt;
+    &lt;PopupWidth&gt;50&lt;/PopupWidth&gt;
+    &lt;WidthCoordinate&gt;%&lt;/WidthCoordinate&gt;
+    &lt;PopupHeight /&gt;
+    &lt;SubmitHiddenFields&gt;False&lt;/SubmitHiddenFields&gt;
+    &lt;IncludeBootstrap&gt;True&lt;/IncludeBootstrap&gt;
+    &lt;IncludeFontAwesome&gt;True&lt;/IncludeFontAwesome&gt;
+    &lt;FloatingLabels&gt;False&lt;/FloatingLabels&gt;
+    &lt;EnableEmbed&gt;False&lt;/EnableEmbed&gt;
+    &lt;AngularnoConflict&gt;True&lt;/AngularnoConflict&gt;
+    &lt;TextColor&gt;inherit&lt;/TextColor&gt;
+    &lt;Padding&gt;0&lt;/Padding&gt;
+    &lt;DateFormat&gt;m/d/yy&lt;/DateFormat&gt;
+    &lt;BaseId&gt;dnn654&lt;/BaseId&gt;
+    &lt;PopupName&gt;Article Details&lt;/PopupName&gt;
+    &lt;RootClasses /&gt;
+    &lt;LocalizedStringsUrl&gt;/DesktopModules/DnnSharp/ActionForm/AdminApi.ashx?method=GetLocalization&amp;amp;locale=en-US&amp;amp;section=FrontEnd&lt;/LocalizedStringsUrl&gt;
+    &lt;PortalHomeUrl&gt;/Portals/0/&lt;/PortalHomeUrl&gt;
+  &lt;/Settings&gt;
+  &lt;Actions xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+    &lt;ActionInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;ActionType&gt;RunSql&lt;/ActionType&gt;
+      &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
+      &lt;LastModified&gt;2022-07-21T11:58:34.303&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
+      &lt;ActionData&gt;{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot; select DisplayName, A.Id, A.Title, A.Content,AT.Name, A.CreatedBy from app.Article A\n inner join dbo.Users U ON A.CreatedBy = U.UserId\n right join app.ArticleType AT ON AT.Id = A.Type\n WHERE A.Id = @articleId\n\n\n&quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[QueryString:articleId]&quot;,&quot;name&quot;:&quot;articleId&quot;}],&quot;OutputTokenName&quot;:&quot;PreInitQuerry&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false}&lt;/ActionData&gt;
+      &lt;ModuleId&gt;654&lt;/ModuleId&gt;
+      &lt;EventName&gt;preinit&lt;/EventName&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/ActionInfo&gt;
+    &lt;ActionInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;ActionType&gt;CloseAFPopup&lt;/ActionType&gt;
+      &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
+      &lt;LastModified&gt;2022-07-21T11:58:34.303&lt;/LastModified&gt;
+      &lt;LastModifiedBy&gt;2&lt;/LastModifiedBy&gt;
+      &lt;ActionData&gt;{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;762f105f-c6df-41f5-9615-b4de881bb9e1&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}}&lt;/ActionData&gt;
+      &lt;ModuleId&gt;654&lt;/ModuleId&gt;
+      &lt;FieldName&gt;Close&lt;/FieldName&gt;
+      &lt;EventName&gt;click&lt;/EventName&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/ActionInfo&gt;
+  &lt;/Actions&gt;
+&lt;/ActionForm&gt;]]></content>
+</module>
