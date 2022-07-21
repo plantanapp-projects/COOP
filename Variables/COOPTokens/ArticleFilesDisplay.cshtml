@@ -1,0 +1,59 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@{
+ var ArticleFiles = COOPTokens.ArticleFiles(ArticleId:TknParams.ArticleId.Value.ToString(),ArticleChangeId:TknParams.ArticleChangeId.Value.ToString());
+ var numOfFiles = ArticleFiles.Count();
+}
+
+    <h5>@numOfFiles Files</h5>
+
+    <div class="files-wrapper">
+          @foreach(var f in ArticleFiles){
+                <div class="file-wrapper">
+                    <div class="image">
+                         <img src="@(Tokens.Helper.DocumentPath(FileId:f.FileId))"/>
+                    </div>
+                    <p class="name">@f.FileName</p>
+                    <a href="javascript:dnnsf.updateQueryStringParam('FileId', @f.FileId);javascript:dnnsf.api.actionGrid.showGridPopup(731)" type="button">View</a>
+                    <a href="javascript:dnnsf.updateQueryStringParam('FileId', @f.FileId);javascript:dnnsf.api.actionForm.openPopupById(730)" type="button" id="unchecked">Remove</a>
+                </div>
+               <!-- <a class="f-item" href=#>-->
+          		   <!-- <p></p>-->
+          	    <!--</a>-->
+            }
+    </div>
+    
+    
+    <!--<style>-->
+        
+    <!--    .files-wrapper {-->
+    <!--        height: 26em!important;;-->
+    <!--        width: 100%;-->
+    <!--        display: flex;-->
+    <!--        flex-direction: column;-->
+    <!--        overflow: scroll;-->
+    <!--        row-gap: 5px;-->
+    <!--    }-->
+        
+    <!--    .file-wrapper {-->
+    <!--        display: flex;-->
+    <!--        width: 95%;-->
+    <!--        align-items: center;-->
+    <!--        justify-content: space-around;-->
+    <!--    }-->
+        
+    <!--    .image {-->
+    <!--        width: 50px;-->
+    <!--        height: 50px;-->
+    <!--        background-color: blue;-->
+    <!--    }-->
+        
+    <!--    p {-->
+    <!--        margin: 0;-->
+    <!--    }-->
+        
+    <!--    a {-->
+    <!--        text-decoration: none;-->
+    <!--    }-->
+        
+        
+    <!--</style>-->
