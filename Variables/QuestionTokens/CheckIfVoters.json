@@ -1,0 +1,22 @@
+{
+  "id": 27,
+  "namespace": {
+    "id": 2,
+    "portalId": 0,
+    "name": "QuestionTokens",
+    "description": "Question tokens"
+  },
+  "name": "CheckIfVoters",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select Id, \n   UU.DisplayName as VotersList\n   FROM app.QuestionAnswerAnswer QAA\ninner join app.Answer A on A.Id = QAA.AnswerId\ninner join dbo.Users U on U.UserId = A.CreatedBy\nleft join app.AnswerUserVotes AUV on AUV.AnswerId = QAA.AnswerId \nleft join dbo.Users UU on UU.UserId = AUV.UserId \n\nWHERE QAA.QuestionId = '[TknParams:QuestionId]' AND A.Id = '[TknParams:answerId]'\nGROUP BY  UU.DisplayName, Id\n\n\n\n\n",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
