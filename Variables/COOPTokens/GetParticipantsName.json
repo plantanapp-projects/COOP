@@ -1,0 +1,21 @@
+{
+  "id": 18,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "COOPTokens"
+  },
+  "name": "GetParticipantsName",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "declare @projectId INT = '[TknParams:projectId]'\n\nselect U.DisplayName from app.ProjectParticipantParticipants PPP\ninner join app.Participant P on P.ID = PPP.ParticipantId\ninner join dbo.Users U on U.UserId = P.Name\nwhere ProjectId = @projectId",
+    "defaultColumn": "",
+    "columns": "DisplayName",
+    "connectionString": "",
+    "type": "db"
+  }
+}
