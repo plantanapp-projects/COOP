@@ -1,0 +1,21 @@
+{
+  "id": 24,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "COOPTokens"
+  },
+  "name": "ShowVoters",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select  --U.DisplayName as Name,  \r\n   --A.Body as Answer,\r\n   --A.CreatedDate as Date,\r\n  -- A.IsCorrect as Correct,\r\n   string_agg(UU.DisplayName, '</br>') as Voters\r\n   --count(DISTINCT AUV.UserId) as 'Votes'\r\n   FROM app.QuestionAnswerAnswer QAA\r\ninner join app.Answer A on A.Id = QAA.AnswerId\r\ninner join dbo.Users U on U.UserId = A.CreatedBy\r\nleft join app.AnswerUserVotes AUV on AUV.AnswerId = QAA.AnswerId \r\nleft join dbo.Users UU on UU.UserId = AUV.UserId\r\n\r\nWHERE QAA.QuestionId = '[QueryString:QuestionId]' AND A.Id = '[Id]'\r\nGROUP BY UU.DisplayName, Id\r\n",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
