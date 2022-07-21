@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "namespace": {
+    "id": 2,
+    "portalId": 0,
+    "name": "QuestionTokens",
+    "description": "Question tokens"
+  },
+  "name": "CheckQuestionCreator",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select count(*) AS Result from app.Question \r\n WHERE Id = '[TknParams:QuestionId]' AND CreatedBy = '[TknParams:CreatedBy]'\r\n ",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
