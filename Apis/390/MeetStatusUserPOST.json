@@ -1,0 +1,131 @@
+{
+  "Name": "MeetStatusUser",
+  "Description": "Creates a new record of type Meet Status/User",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 96,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Input": [
+    {
+      "Name": "MeetingId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "StatusId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Users",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Name",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"Name is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.acd44ac7-d1cb-4123-8aee-7e9afaf0689f",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "MeetingId": "[MeetingId]",
+        "StatusId": "[StatusId]",
+        "Users": "[Users]",
+        "Name": "[Name]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "acd44ac7-d1cb-4123-8aee-7e9afaf0689f"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.acd44ac7-d1cb-4123-8aee-7e9afaf0689f",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "acd44ac7-d1cb-4123-8aee-7e9afaf0689f"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "MeetingId",
+            "value": "[CreatedRecord:MeetingId]"
+          },
+          {
+            "name": "StatusId",
+            "value": "[CreatedRecord:StatusId]"
+          },
+          {
+            "name": "Users",
+            "value": "[CreatedRecord:Users]"
+          },
+          {
+            "name": "Name",
+            "value": "[CreatedRecord:Name]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://coopv2.apps.plantanapp.com/api/MeetStatusUser?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
