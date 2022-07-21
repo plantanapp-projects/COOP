@@ -1,0 +1,352 @@
+<module type="ActionGrid" version="05.20.95.00">
+    <contentKey />
+    <moduleID>684</moduleID>
+    <alignment />
+    <alltabs>false</alltabs>
+    <border />
+    <cachemethod />
+    <cachetime>0</cachetime>
+    <color />
+    <containersrc />
+    <displayprint>false</displayprint>
+    <displaysyndicate>false</displaysyndicate>
+    <displaytitle>true</displaytitle>
+    <enddate>0001-01-01T00:00:00</enddate>
+    <footer />
+    <header />
+    <iconfile />
+    <inheritviewpermissions>true</inheritviewpermissions>
+    <modulepermissions>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Administrators</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Registered Users</rolename>
+        </permission>
+        <permission>
+            <permissioncode>SYSTEM_MODULE_DEFINITION</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Users</rolename>
+        </permission>
+    </modulepermissions>
+    <title>Meeting Grid</title>
+    <startdate>0001-01-01T00:00:00</startdate>
+    <uniqueId>282b229b-4443-4901-baf9-e86db5c0930d</uniqueId>
+    <visibility>Maximized</visibility>
+    <cultureCode />
+    <modulesettings />
+    <tabmodulesettings />
+    <definition>Action Grid</definition>
+    <moduledefinition>avt.ActionGrid</moduledefinition>
+    <content type="ActionGrid" version="05.20.95.00"><![CDATA[&lt;ActionGrid&gt;
+  &lt;Settings&gt;
+    &lt;Version&gt;5.20.0&lt;/Version&gt;
+    &lt;Build&gt;5.20.95&lt;/Build&gt;
+    &lt;CurrentContext&gt;ExportImport&lt;/CurrentContext&gt;
+    &lt;ModuleId&gt;684&lt;/ModuleId&gt;
+    &lt;DataSource&gt;{&quot;DefinitionId&quot;:&quot;SqlQuery&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;SELECT M.Id, M.Date, MSE.Name as Source, MS.Name as Status, M.MeetingLink, M.Subject, U.DisplayName as Owner, \n(Select COUNT(UserId) from app.MeetingUserMentor where MeetingId = M.Id) as Participants\nFROM app.Meeting M\ninner join app.MeetingUserMentor MUM on MUM.MeetingId = M.Id and MUM.UserId = @userId\ninner join dbo.Users U on U.UserId = M.CreatedBy\nleft join app.MeetStatusUser MSU on MSU.MeetingId = M.Id and MSU.Users = @UserId \nleft join app.MeetingStatus MS on MS.Id = MSU.StatusId\nleft join app.MeetingMeetingSourceMeetingSource MMSMS on MMSMS.MeetingId = M.Id\nleft join app.MeetingSource MSE on MSE.Id = MMSMS.MeetingSourceId\nunion \nselect  M.Id, M.Date, MSE.Name as Source, MS.Name as Status, M.MeetingLink, M.Subject, U.DisplayName as Owner,\n(Select COUNT(UserId) from app.MeetingUserMentor where MeetingId = M.Id)\nFROM app.Meeting M \ninner join dbo.Users U on U.UserId = M.CreatedBy\nleft join app.MeetStatusUser MSU on MSU.MeetingId = M.Id and MSU.Users = @UserId \nleft join app.MeetingStatus MS on MS.Id = MSU.StatusId\nleft join app.MeetingMeetingSourceMeetingSource MMSMS on MMSMS.MeetingId = M.Id\nleft join app.MeetingSource MSE on MSE.Id = MMSMS.MeetingSourceId\nWhere M.CreatedBy = @userId\nORDER BY M.Id DESC\n&quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[User:UserId]&quot;,&quot;name&quot;:&quot;userId&quot;}],&quot;IdColumn&quot;:&quot;Id&quot;,&quot;SqlQueryColumns&quot;:&quot;&quot;,&quot;SqlQueryInsert&quot;:&quot;&quot;,&quot;SqlQueryUpdate&quot;:&quot;&quot;,&quot;SqlQueryDelete&quot;:&quot;&quot;,&quot;AddUrl&quot;:&quot;&quot;,&quot;EditUrl&quot;:&quot;&quot;,&quot;ViewUrl&quot;:&quot;&quot;},&quot;Fields&quot;:[{&quot;Title&quot;:&quot;Id&quot;,&quot;Name&quot;:&quot;Id&quot;,&quot;TypeStr&quot;:&quot;System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;Date&quot;,&quot;Name&quot;:&quot;Date&quot;,&quot;TypeStr&quot;:&quot;System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;Source&quot;,&quot;Name&quot;:&quot;Source&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;Status&quot;,&quot;Name&quot;:&quot;Status&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;MeetingLink&quot;,&quot;Name&quot;:&quot;MeetingLink&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;Subject&quot;,&quot;Name&quot;:&quot;Subject&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;Owner&quot;,&quot;Name&quot;:&quot;Owner&quot;,&quot;TypeStr&quot;:&quot;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null},{&quot;Title&quot;:&quot;Participants&quot;,&quot;Name&quot;:&quot;Participants&quot;,&quot;TypeStr&quot;:&quot;System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;,&quot;CanBeSearchable&quot;:true,&quot;CanBeSortable&quot;:true,&quot;CanBeFilterable&quot;:true,&quot;SupportsUpdate&quot;:false,&quot;IsNullable&quot;:true,&quot;DefaultValue&quot;:null}]}&lt;/DataSource&gt;
+    &lt;ShowTitle&gt;True&lt;/ShowTitle&gt;
+    &lt;NoDataMessage&gt;No Data&lt;/NoDataMessage&gt;
+    &lt;AditionalHtmlHeader /&gt;
+    &lt;OnInitJs /&gt;
+    &lt;OnRefreshJs /&gt;
+    &lt;EnableEmbed&gt;False&lt;/EnableEmbed&gt;
+    &lt;ShowCondition /&gt;
+    &lt;SearchPlaceholder&gt;Search&lt;/SearchPlaceholder&gt;
+    &lt;SearchDelayTime&gt;300&lt;/SearchDelayTime&gt;
+    &lt;TableHeight /&gt;
+    &lt;PagerStyle&gt;TouchFriendly&lt;/PagerStyle&gt;
+    &lt;DisplayMode&gt;Always&lt;/DisplayMode&gt;
+    &lt;PopupWidth /&gt;
+    &lt;WidthCoordinate&gt;px&lt;/WidthCoordinate&gt;
+    &lt;PopupName /&gt;
+    &lt;PageSizes&gt;[12,24,48]&lt;/PageSizes&gt;
+    &lt;DefaultPageSize&gt;12&lt;/DefaultPageSize&gt;
+    &lt;IsDebug&gt;False&lt;/IsDebug&gt;
+    &lt;SearchEnabled&gt;True&lt;/SearchEnabled&gt;
+    &lt;HideEmptyGrid&gt;False&lt;/HideEmptyGrid&gt;
+    &lt;LoadOnSearch&gt;False&lt;/LoadOnSearch&gt;
+    &lt;HideTableHead&gt;False&lt;/HideTableHead&gt;
+    &lt;EnableStickyHead&gt;False&lt;/EnableStickyHead&gt;
+    &lt;ItemButtonPosition&gt;Right&lt;/ItemButtonPosition&gt;
+    &lt;ItemButtonPositionInColumn&gt;Right&lt;/ItemButtonPositionInColumn&gt;
+    &lt;ItemButtonGroupingOptions&gt;HorizontalAlign&lt;/ItemButtonGroupingOptions&gt;
+    &lt;FiltersEnabled&gt;True&lt;/FiltersEnabled&gt;
+    &lt;ShowFilters&gt;False&lt;/ShowFilters&gt;
+    &lt;SyncUrl&gt;True&lt;/SyncUrl&gt;
+    &lt;IncludeBootstrapJS&gt;True&lt;/IncludeBootstrapJS&gt;
+    &lt;IncludeBootstrapCSS&gt;True&lt;/IncludeBootstrapCSS&gt;
+    &lt;IncludeFontAwesome&gt;True&lt;/IncludeFontAwesome&gt;
+    &lt;AngularnoConflict&gt;True&lt;/AngularnoConflict&gt;
+    &lt;SelectAllPosition&gt;None&lt;/SelectAllPosition&gt;
+    &lt;SearchPosition&gt;top&lt;/SearchPosition&gt;
+    &lt;RootCSSClasses /&gt;
+    &lt;ModalRefresh&gt;False&lt;/ModalRefresh&gt;
+    &lt;ShowLoading&gt;True&lt;/ShowLoading&gt;
+    &lt;TabsProLoading&gt;False&lt;/TabsProLoading&gt;
+    &lt;EnableGridSelect&gt;True&lt;/EnableGridSelect&gt;
+    &lt;DataSourceAutoRefreshInterval&gt;1&lt;/DataSourceAutoRefreshInterval&gt;
+    &lt;DataSourceRefreshType&gt;manual&lt;/DataSourceRefreshType&gt;
+    &lt;DateFormat&gt;m/d/yy&lt;/DateFormat&gt;
+    &lt;ItemButtonGroups&gt;[]&lt;/ItemButtonGroups&gt;
+    &lt;GridButtonGroups&gt;[]&lt;/GridButtonGroups&gt;
+    &lt;ItemButtons&gt;[{&quot;ItemActions&quot;:[{&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;OpenAFPopup&quot;,&quot;OrderIndex&quot;:0,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;f661eca6-5e61-4cfc-8cd8-7de40e2a9d7f&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;ReinitForm&quot;:true,&quot;Params&quot;:[{&quot;value&quot;:&quot;[Id]&quot;,&quot;name&quot;:&quot;meetingId&quot;}],&quot;AllowUserClose&quot;:true,&quot;CloseOnClick&quot;:true,&quot;CloseOnEscape&quot;:true},&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;IsDeleted&quot;:false}],&quot;Url&quot;:&quot;&amp;amp;buttonName=SeeInfo&quot;,&quot;ModuleId&quot;:684,&quot;AutoName&quot;:true,&quot;Name&quot;:&quot;SeeInfo&quot;,&quot;Title&quot;:&quot;See Info&quot;,&quot;Help&quot;:null,&quot;ShowCondition&quot;:null,&quot;IsEnabled&quot;:false,&quot;Metadata&quot;:{},&quot;Type&quot;:&quot;ItemButton&quot;,&quot;OrderIndex&quot;:0,&quot;CssClass&quot;:&quot;primary&quot;,&quot;CustomCssClass&quot;:null,&quot;IconClass&quot;:&quot;&quot;,&quot;FaIconClass&quot;:&quot;fas fa-arrow-alt-circle-right&quot;,&quot;PermissionAllUsers&quot;:true,&quot;PermissionsExportJson&quot;:&quot;[]&quot;,&quot;Permissions&quot;:[],&quot;AskForConfirmation&quot;:false,&quot;ConfirmationMessage&quot;:&quot;Are you sure you want to do this?&quot;,&quot;ConfirmationOk&quot;:&quot;Yes, pretty sure&quot;,&quot;ConfirmationCancel&quot;:&quot;No, I&#39;m having second thoughts&quot;,&quot;JsCode&quot;:&quot;dnnsf.updateQueryStringParam(&#39;meetingId&#39;, &#39;[Id]&#39;); &quot;,&quot;IsClientButton&quot;:false,&quot;ButtonGroupId&quot;:null,&quot;ButtonGroupName&quot;:null,&quot;Id&quot;:0,&quot;EnableCondition&quot;:null,&quot;IsDeleted&quot;:false},{&quot;ItemActions&quot;:[{&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;RunSql&quot;,&quot;OrderIndex&quot;:0,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;QueryTimeout&quot;:&quot;&quot;,&quot;SqlQuery&quot;:&quot;Select STRING_AGG ( U.Email,&#39;;&#39;) as Participants\nfrom app.Meeting M\ninner join app.MeetingUserMentor MUM on MUM.MeetingId = M.Id\ninner join dbo.Users U on U.UserId = MUM.UserId\nwhere M.Id = @meetingId&quot;,&quot;BindTokens&quot;:[{&quot;value&quot;:&quot;[Id]&quot;,&quot;name&quot;:&quot;meetingId&quot;}],&quot;OutputTokenName&quot;:&quot;ParticipantsList&quot;,&quot;ExtractColumns&quot;:&quot;&quot;,&quot;OnError&quot;:[],&quot;ShowErrors&quot;:false},&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;IsDeleted&quot;:false},{&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;ShowError&quot;,&quot;OrderIndex&quot;:1,&quot;Condition&quot;:&quot;0&quot;,&quot;Parameters&quot;:{&quot;Message&quot;:&quot;&amp;lt;p&amp;gt;[ParticipantsList] - [Id]&amp;lt;/p&amp;gt;&quot;,&quot;AllowHtml&quot;:true},&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;IsDeleted&quot;:false},{&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;SendMail&quot;,&quot;OrderIndex&quot;:2,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;Credentials&quot;:{&quot;Type&quot;:&quot;smtp&quot;,&quot;Group&quot;:&quot;4&quot;,&quot;EntireGroup&quot;:false},&quot;From&quot;:&quot;&quot;,&quot;To&quot;:&quot;[ParticipantsList]&quot;,&quot;DetermineEmail&quot;:&quot;&quot;,&quot;ToAllUsers&quot;:&quot;&quot;,&quot;ReplyTo&quot;:&quot;&quot;,&quot;Cc&quot;:&quot;&quot;,&quot;Bcc&quot;:&quot;&quot;,&quot;Subject&quot;:&quot;[Subject]&quot;,&quot;Format&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;Html&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}},&quot;Body&quot;:&quot;&amp;lt;p&amp;gt;[User:DisplayName] has canceled the meeting&amp;amp;nbsp;&amp;lt;/p&amp;gt;&quot;,&quot;Headers&quot;:&quot;&quot;,&quot;PortalFiles&quot;:&quot;&quot;,&quot;FileToken1&quot;:&quot;&quot;},&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;IsDeleted&quot;:false},{&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;PlantAnApp.DeleteEntity.0a8a310b-a82e-40e0-a9ab-efa1c0f91d31&quot;,&quot;OrderIndex&quot;:3,&quot;Condition&quot;:&quot;&quot;,&quot;Parameters&quot;:{&quot;ConnectionString&quot;:&quot;&quot;,&quot;RecordId&quot;:&quot;[Id]&quot;,&quot;OnError&quot;:[]},&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;IsDeleted&quot;:false},{&quot;Id&quot;:0,&quot;ButtonId&quot;:0,&quot;ActionInfo&quot;:{&quot;ActionErrorMessage&quot;:null,&quot;Metadata&quot;:{},&quot;Id&quot;:0,&quot;Description&quot;:null,&quot;ActionType&quot;:&quot;RefreshGrid&quot;,&quot;OrderIndex&quot;:4,&quot;Condition&quot;:null,&quot;Parameters&quot;:{&quot;ModuleId&quot;:{&quot;Expression&quot;:&quot;&quot;,&quot;Value&quot;:&quot;282b229b-4443-4901-baf9-e86db5c0930d&quot;,&quot;IsExpression&quot;:false,&quot;Parameters&quot;:{}}},&quot;IsDeleted&quot;:false},&quot;EventName&quot;:&quot;ItemAction&quot;,&quot;IsDeleted&quot;:false}],&quot;Url&quot;:&quot;&amp;amp;buttonName=Delete&quot;,&quot;ModuleId&quot;:684,&quot;AutoName&quot;:false,&quot;Name&quot;:&quot;Delete&quot;,&quot;Title&quot;:&quot;&quot;,&quot;Help&quot;:null,&quot;ShowCondition&quot;:&quot;[COOPTokens:GetMeetEntry.CreatedBy(meetingId=\&quot;[Id]\&quot;)]==[User:UserId]&quot;,&quot;IsEnabled&quot;:false,&quot;Metadata&quot;:{},&quot;Type&quot;:&quot;ItemButton&quot;,&quot;OrderIndex&quot;:1,&quot;CssClass&quot;:&quot;info&quot;,&quot;CustomCssClass&quot;:null,&quot;IconClass&quot;:&quot;&quot;,&quot;FaIconClass&quot;:&quot;fas fa-trash&quot;,&quot;PermissionAllUsers&quot;:true,&quot;PermissionsExportJson&quot;:&quot;[]&quot;,&quot;Permissions&quot;:[],&quot;AskForConfirmation&quot;:true,&quot;ConfirmationMessage&quot;:&quot;Are you sure you want to do this?&quot;,&quot;ConfirmationOk&quot;:&quot;Yes&quot;,&quot;ConfirmationCancel&quot;:&quot;No&quot;,&quot;JsCode&quot;:null,&quot;IsClientButton&quot;:false,&quot;ButtonGroupId&quot;:null,&quot;ButtonGroupName&quot;:null,&quot;Id&quot;:0,&quot;EnableCondition&quot;:null,&quot;IsDeleted&quot;:false}]&lt;/ItemButtons&gt;
+    &lt;GridButtons&gt;[]&lt;/GridButtons&gt;
+    &lt;PortalHomeUrl&gt;/Portals/0/&lt;/PortalHomeUrl&gt;
+    &lt;TooltipContent /&gt;
+    &lt;TooltipDataTrigger&gt;click&lt;/TooltipDataTrigger&gt;
+    &lt;TooltipIcon&gt;glyphicon-info-sign&lt;/TooltipIcon&gt;
+    &lt;TooltipIconPosition&gt;right&lt;/TooltipIconPosition&gt;
+    &lt;TooltipInEdit&gt;right&lt;/TooltipInEdit&gt;
+    &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+    &lt;TooltipOrientation /&gt;
+    &lt;TooltipTitle /&gt;
+    &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+    &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+    &lt;RefreshOnTabChange&gt;False&lt;/RefreshOnTabChange&gt;
+    &lt;UseDragAndDropActions&gt;False&lt;/UseDragAndDropActions&gt;
+    &lt;DragAndDropActions&gt;[]&lt;/DragAndDropActions&gt;
+    &lt;InitLoadFromTabsPro&gt;False&lt;/InitLoadFromTabsPro&gt;
+    &lt;LockIntoEditMode&gt;False&lt;/LockIntoEditMode&gt;
+    &lt;LockInEditForEachRowActions&gt;[]&lt;/LockInEditForEachRowActions&gt;
+    &lt;LockInEditFinalActions&gt;[]&lt;/LockInEditFinalActions&gt;
+    &lt;Template /&gt;
+    &lt;MobileTemplate /&gt;
+    &lt;SwitchingTemplates&gt;False&lt;/SwitchingTemplates&gt;
+    &lt;TemplateConfig&gt;{}&lt;/TemplateConfig&gt;
+    &lt;Views&gt;[{&quot;Definition&quot;:{&quot;Id&quot;:&quot;Calendar&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Calendar&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;Renders data in a calendar based on a date field.&quot;},&quot;FaIcon&quot;:&quot;far fa-calendar-alt&quot;,&quot;TypeStr&quot;:&quot;PlantAnApp.Listing.ViewProviders.CalendarViewProvider, DnnSharp.ActionGrid.Core&quot;,&quot;Settings&quot;:{&quot;showWhenNoData&quot;:true},&quot;Parameters&quot;:[]},&quot;Id&quot;:293,&quot;ListingModuleId&quot;:684,&quot;ViewName&quot;:&quot;Calendar&quot;,&quot;ViewTitle&quot;:&quot;Calendar&quot;,&quot;RendersTopButtons&quot;:false,&quot;RendersBottomButtons&quot;:false,&quot;ShowWhenNoData&quot;:true,&quot;IsEnabled&quot;:false,&quot;OrderIndex&quot;:0,&quot;Icon&quot;:&quot;far fa-calendar-alt&quot;,&quot;Settings&quot;:{},&quot;IsDeleted&quot;:false},{&quot;Definition&quot;:{&quot;Id&quot;:&quot;Cards&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Cards&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;Renders data in as cards.&quot;},&quot;FaIcon&quot;:&quot;fas fa-th-large&quot;,&quot;TypeStr&quot;:&quot;PlantAnApp.Listing.ViewProviders.CardViewProvider, DnnSharp.ActionGrid.Core&quot;,&quot;Settings&quot;:{&quot;rendersTopButtons&quot;:false,&quot;rendersBottomButtons&quot;:true},&quot;Parameters&quot;:[{&quot;For&quot;:null,&quot;NotFor&quot;:null,&quot;Id&quot;:&quot;PageSizes&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Page Sizes&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;Comma delimited list with page sizes that the user can select from.&quot;},&quot;Placeholder&quot;:null,&quot;DefaultValue&quot;:null,&quot;Default&quot;:&quot;10,20,50&quot;,&quot;Type&quot;:&quot;Text&quot;,&quot;IsPublic&quot;:false,&quot;Settings&quot;:{},&quot;Groups&quot;:null,&quot;Parameters&quot;:[],&quot;Conditions&quot;:[]},{&quot;For&quot;:null,&quot;NotFor&quot;:null,&quot;Id&quot;:&quot;DefaultPageSize&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Default Page Size&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;The default page size must be a number from the list with all page sizes.&quot;},&quot;Placeholder&quot;:null,&quot;DefaultValue&quot;:null,&quot;Default&quot;:10,&quot;Type&quot;:&quot;Text&quot;,&quot;IsPublic&quot;:false,&quot;Settings&quot;:{},&quot;Groups&quot;:null,&quot;Parameters&quot;:[],&quot;Conditions&quot;:[]}]},&quot;Id&quot;:294,&quot;ListingModuleId&quot;:684,&quot;ViewName&quot;:&quot;Cards&quot;,&quot;ViewTitle&quot;:&quot;Cards&quot;,&quot;RendersTopButtons&quot;:false,&quot;RendersBottomButtons&quot;:true,&quot;ShowWhenNoData&quot;:false,&quot;IsEnabled&quot;:true,&quot;OrderIndex&quot;:1,&quot;Icon&quot;:&quot;fas fa-th-large&quot;,&quot;Settings&quot;:{&quot;PageSizes&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:674,&quot;Name&quot;:&quot;PageSizes&quot;,&quot;ValueType&quot;:&quot;System.String&quot;,&quot;ValueToString&quot;:&quot;10,20,50&quot;,&quot;Value&quot;:&quot;10,20,50&quot;,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4567505+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;DefaultPageSize&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:675,&quot;Name&quot;:&quot;DefaultPageSize&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;10&quot;,&quot;Value&quot;:10,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4723768+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;ShowId&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:751,&quot;Name&quot;:&quot;ShowId&quot;,&quot;ValueType&quot;:&quot;System.Boolean&quot;,&quot;ValueToString&quot;:&quot;False&quot;,&quot;Value&quot;:false,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4723768+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;TitleField&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:752,&quot;Name&quot;:&quot;TitleField&quot;,&quot;ValueType&quot;:&quot;System.String&quot;,&quot;ValueToString&quot;:null,&quot;Value&quot;:null,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4723768+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;SubtitleField&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:753,&quot;Name&quot;:&quot;SubtitleField&quot;,&quot;ValueType&quot;:&quot;System.String&quot;,&quot;ValueToString&quot;:null,&quot;Value&quot;:null,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4723768+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;ImageField&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:754,&quot;Name&quot;:&quot;ImageField&quot;,&quot;ValueType&quot;:&quot;System.String&quot;,&quot;ValueToString&quot;:null,&quot;Value&quot;:null,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4723768+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;DescriptionField&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:755,&quot;Name&quot;:&quot;DescriptionField&quot;,&quot;ValueType&quot;:&quot;System.String&quot;,&quot;ValueToString&quot;:null,&quot;Value&quot;:null,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4879995+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;FooterField&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:756,&quot;Name&quot;:&quot;FooterField&quot;,&quot;ValueType&quot;:&quot;System.String&quot;,&quot;ValueToString&quot;:null,&quot;Value&quot;:null,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4879995+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;ColsForLarge&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:757,&quot;Name&quot;:&quot;ColsForLarge&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;4&quot;,&quot;Value&quot;:4,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4879995+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;ColsForDesktop&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:758,&quot;Name&quot;:&quot;ColsForDesktop&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;4&quot;,&quot;Value&quot;:4,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4879995+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;ColsForTablet&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:759,&quot;Name&quot;:&quot;ColsForTablet&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;2&quot;,&quot;Value&quot;:2,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.4879995+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;ColsForMobile&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:760,&quot;Name&quot;:&quot;ColsForMobile&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;1&quot;,&quot;Value&quot;:1,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5036251+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;RowsForLarge&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:761,&quot;Name&quot;:&quot;RowsForLarge&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;4&quot;,&quot;Value&quot;:4,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5036251+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;RowsForDesktop&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:762,&quot;Name&quot;:&quot;RowsForDesktop&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;4&quot;,&quot;Value&quot;:4,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5036251+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;RowsForTablet&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:763,&quot;Name&quot;:&quot;RowsForTablet&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;4&quot;,&quot;Value&quot;:4,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5036251+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;RowsForMobile&quot;:{&quot;ViewId&quot;:294,&quot;Id&quot;:764,&quot;Name&quot;:&quot;RowsForMobile&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;4&quot;,&quot;Value&quot;:4,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5036251+00:00&quot;,&quot;IsDeleted&quot;:false}},&quot;IsDeleted&quot;:false},{&quot;Definition&quot;:{&quot;Id&quot;:&quot;DataTable&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Data Table&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;Renders data in table format, with one record per row.&quot;},&quot;FaIcon&quot;:&quot;fas fa-th-list&quot;,&quot;TypeStr&quot;:&quot;PlantAnApp.Listing.ViewProviders.DataTableViewProvider, DnnSharp.ActionGrid.Core&quot;,&quot;Settings&quot;:{&quot;rendersTopButtons&quot;:false,&quot;rendersBottomButtons&quot;:true},&quot;Parameters&quot;:[{&quot;For&quot;:null,&quot;NotFor&quot;:null,&quot;Id&quot;:&quot;PageSizes&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Page Sizes&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;Comma delimited list with page sizes that the user can select from.&quot;},&quot;Placeholder&quot;:null,&quot;DefaultValue&quot;:null,&quot;Default&quot;:&quot;10,20,50&quot;,&quot;Type&quot;:&quot;Text&quot;,&quot;IsPublic&quot;:false,&quot;Settings&quot;:{},&quot;Groups&quot;:null,&quot;Parameters&quot;:[],&quot;Conditions&quot;:[]},{&quot;For&quot;:null,&quot;NotFor&quot;:null,&quot;Id&quot;:&quot;DefaultPageSize&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Default Page Size&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;The default page size must be a number from the list with all page sizes.&quot;},&quot;Placeholder&quot;:null,&quot;DefaultValue&quot;:null,&quot;Default&quot;:10,&quot;Type&quot;:&quot;Text&quot;,&quot;IsPublic&quot;:false,&quot;Settings&quot;:{},&quot;Groups&quot;:null,&quot;Parameters&quot;:[],&quot;Conditions&quot;:[]},{&quot;For&quot;:null,&quot;NotFor&quot;:null,&quot;Id&quot;:&quot;ItemButtonPosition&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Button Position&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;The default button position.&quot;},&quot;Placeholder&quot;:null,&quot;DefaultValue&quot;:null,&quot;Default&quot;:0,&quot;Type&quot;:&quot;Number&quot;,&quot;IsPublic&quot;:false,&quot;Settings&quot;:{},&quot;Groups&quot;:null,&quot;Parameters&quot;:[],&quot;Conditions&quot;:[]},{&quot;For&quot;:null,&quot;NotFor&quot;:null,&quot;Id&quot;:&quot;ItemButtonPositionInColumn&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Button Position In Column&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;The default button position in column.&quot;},&quot;Placeholder&quot;:null,&quot;DefaultValue&quot;:null,&quot;Default&quot;:0,&quot;Type&quot;:&quot;Number&quot;,&quot;IsPublic&quot;:false,&quot;Settings&quot;:{},&quot;Groups&quot;:null,&quot;Parameters&quot;:[],&quot;Conditions&quot;:[]},{&quot;For&quot;:null,&quot;NotFor&quot;:null,&quot;Id&quot;:&quot;ItemButtonGroupingOptions&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Button Position In Column&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;The default button stacking option.&quot;},&quot;Placeholder&quot;:null,&quot;DefaultValue&quot;:null,&quot;Default&quot;:0,&quot;Type&quot;:&quot;Number&quot;,&quot;IsPublic&quot;:false,&quot;Settings&quot;:{},&quot;Groups&quot;:null,&quot;Parameters&quot;:[],&quot;Conditions&quot;:[]}]},&quot;Id&quot;:295,&quot;ListingModuleId&quot;:684,&quot;ViewName&quot;:&quot;DataTable&quot;,&quot;ViewTitle&quot;:&quot;Data Table&quot;,&quot;RendersTopButtons&quot;:false,&quot;RendersBottomButtons&quot;:true,&quot;ShowWhenNoData&quot;:false,&quot;IsEnabled&quot;:true,&quot;OrderIndex&quot;:2,&quot;Icon&quot;:&quot;fas fa-th-list&quot;,&quot;Settings&quot;:{&quot;PageSizes&quot;:{&quot;ViewId&quot;:295,&quot;Id&quot;:676,&quot;Name&quot;:&quot;PageSizes&quot;,&quot;ValueType&quot;:&quot;System.String&quot;,&quot;ValueToString&quot;:&quot;10,20,50&quot;,&quot;Value&quot;:&quot;10,20,50&quot;,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5192486+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;DefaultPageSize&quot;:{&quot;ViewId&quot;:295,&quot;Id&quot;:677,&quot;Name&quot;:&quot;DefaultPageSize&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;10&quot;,&quot;Value&quot;:10,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5192486+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;ItemButtonPosition&quot;:{&quot;ViewId&quot;:295,&quot;Id&quot;:678,&quot;Name&quot;:&quot;ItemButtonPosition&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;0&quot;,&quot;Value&quot;:0,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5192486+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;ItemButtonPositionInColumn&quot;:{&quot;ViewId&quot;:295,&quot;Id&quot;:679,&quot;Name&quot;:&quot;ItemButtonPositionInColumn&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;0&quot;,&quot;Value&quot;:0,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5348864+00:00&quot;,&quot;IsDeleted&quot;:false},&quot;ItemButtonGroupingOptions&quot;:{&quot;ViewId&quot;:295,&quot;Id&quot;:680,&quot;Name&quot;:&quot;ItemButtonGroupingOptions&quot;,&quot;ValueType&quot;:&quot;System.Int64&quot;,&quot;ValueToString&quot;:&quot;0&quot;,&quot;Value&quot;:0,&quot;LastModifiedBy&quot;:1,&quot;LastModifiedDate&quot;:&quot;2022-07-21T06:41:49.5348864+00:00&quot;,&quot;IsDeleted&quot;:false}},&quot;IsDeleted&quot;:false},{&quot;Definition&quot;:{&quot;Id&quot;:&quot;Legacy&quot;,&quot;Title&quot;:{&quot;default&quot;:&quot;Legacy View&quot;},&quot;HelpText&quot;:{&quot;default&quot;:&quot;The legacy views are replaced by the new rendering engine that has extended capabilities in terms of rendering data in various formats.&quot;},&quot;FaIcon&quot;:&quot;fas fa-th-list&quot;,&quot;TypeStr&quot;:&quot;PlantAnApp.Listing.ViewProviders.LegacyViewProvider, DnnSharp.ActionGrid.Core&quot;,&quot;Settings&quot;:{},&quot;Parameters&quot;:[]},&quot;Id&quot;:296,&quot;ListingModuleId&quot;:684,&quot;ViewName&quot;:&quot;Legacy&quot;,&quot;ViewTitle&quot;:&quot;Legacy View&quot;,&quot;RendersTopButtons&quot;:false,&quot;RendersBottomButtons&quot;:false,&quot;ShowWhenNoData&quot;:false,&quot;IsEnabled&quot;:false,&quot;OrderIndex&quot;:3,&quot;Icon&quot;:&quot;fas fa-th-list&quot;,&quot;Settings&quot;:{},&quot;IsDeleted&quot;:false}]&lt;/Views&gt;
+  &lt;/Settings&gt;
+  &lt;Fields&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Owner&lt;/Title&gt;
+      &lt;RefName&gt;Owner&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;0&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;DetailViewOnly&gt;false&lt;/DetailViewOnly&gt;
+      &lt;ShowOnMobile&gt;true&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;true&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Subject&lt;/Title&gt;
+      &lt;RefName&gt;Subject&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;1&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;DetailViewOnly&gt;false&lt;/DetailViewOnly&gt;
+      &lt;ShowOnMobile&gt;true&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;true&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Date&lt;/Title&gt;
+      &lt;RefName&gt;Date&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;false&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;2&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;DetailViewOnly&gt;false&lt;/DetailViewOnly&gt;
+      &lt;ShowOnMobile&gt;true&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;true&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Participants&lt;/Title&gt;
+      &lt;RefName&gt;Participants&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;true&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;3&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;DetailViewOnly&gt;false&lt;/DetailViewOnly&gt;
+      &lt;ShowOnMobile&gt;true&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;true&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Source&lt;/Title&gt;
+      &lt;RefName&gt;Source&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;true&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;true&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;4&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;DetailViewOnly&gt;false&lt;/DetailViewOnly&gt;
+      &lt;ShowOnMobile&gt;true&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;true&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+    &lt;FieldInfo&gt;
+      &lt;IsDeleted&gt;false&lt;/IsDeleted&gt;
+      &lt;Title&gt;Status&lt;/Title&gt;
+      &lt;RefName&gt;Status&lt;/RefName&gt;
+      &lt;IsEnabled&gt;true&lt;/IsEnabled&gt;
+      &lt;IsInitiallyVisible&gt;true&lt;/IsInitiallyVisible&gt;
+      &lt;IsSortable&gt;true&lt;/IsSortable&gt;
+      &lt;CanBeSortable&gt;true&lt;/CanBeSortable&gt;
+      &lt;IsSearchable&gt;true&lt;/IsSearchable&gt;
+      &lt;AllowHtml&gt;true&lt;/AllowHtml&gt;
+      &lt;CanBeSearchable&gt;true&lt;/CanBeSearchable&gt;
+      &lt;IsFilterable&gt;false&lt;/IsFilterable&gt;
+      &lt;CanBeFilterable&gt;true&lt;/CanBeFilterable&gt;
+      &lt;FormatFilters&gt;false&lt;/FormatFilters&gt;
+      &lt;OrderIndex&gt;5&lt;/OrderIndex&gt;
+      &lt;FormatterParameters /&gt;
+      &lt;FieldCondition&gt;0&lt;/FieldCondition&gt;
+      &lt;TooltipEnabled&gt;false&lt;/TooltipEnabled&gt;
+      &lt;TooltipInEdit&gt;false&lt;/TooltipInEdit&gt;
+      &lt;TooltipHeight&gt;0&lt;/TooltipHeight&gt;
+      &lt;TooltipWidth&gt;0&lt;/TooltipWidth&gt;
+      &lt;ColumnTextAlignment&gt;left&lt;/ColumnTextAlignment&gt;
+      &lt;HeaderTextAlignment&gt;false&lt;/HeaderTextAlignment&gt;
+      &lt;ShowInFooter&gt;no&lt;/ShowInFooter&gt;
+      &lt;ShowInFooterSumDecimals&gt;2&lt;/ShowInFooterSumDecimals&gt;
+      &lt;EditFieldType&gt;auto&lt;/EditFieldType&gt;
+      &lt;EditFieldTypeParameters /&gt;
+      &lt;Validation /&gt;
+      &lt;FieldType&gt;Field&lt;/FieldType&gt;
+      &lt;FieldTypeStr&gt;Field&lt;/FieldTypeStr&gt;
+      &lt;DetailViewOnly&gt;false&lt;/DetailViewOnly&gt;
+      &lt;ShowOnMobile&gt;true&lt;/ShowOnMobile&gt;
+      &lt;ShowOnTablet&gt;true&lt;/ShowOnTablet&gt;
+      &lt;ShowOnDesktop&gt;true&lt;/ShowOnDesktop&gt;
+      &lt;ShowOnLargeScreens&gt;true&lt;/ShowOnLargeScreens&gt;
+      &lt;MetadataJson&gt;{}&lt;/MetadataJson&gt;
+      &lt;Metadata /&gt;
+    &lt;/FieldInfo&gt;
+  &lt;/Fields&gt;
+&lt;/ActionGrid&gt;]]></content>
+</module>
