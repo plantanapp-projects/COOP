@@ -1,0 +1,128 @@
+{
+  "6": [
+    {
+      "Id": 145,
+      "PermissionType": {
+        "Id": 1,
+        "Name": "Can View"
+      },
+      "RoleId": 6,
+      "RoleName": "Admins",
+      "Value": "all"
+    },
+    {
+      "Id": 146,
+      "PermissionType": {
+        "Id": 2,
+        "Name": "Can Add"
+      },
+      "RoleId": 6,
+      "RoleName": "Admins",
+      "Value": "true"
+    },
+    {
+      "Id": 147,
+      "PermissionType": {
+        "Id": 3,
+        "Name": "Can Edit"
+      },
+      "RoleId": 6,
+      "RoleName": "Admins",
+      "Value": "all"
+    },
+    {
+      "Id": 148,
+      "PermissionType": {
+        "Id": 4,
+        "Name": "Can Delete"
+      },
+      "RoleId": 6,
+      "RoleName": "Admins",
+      "Value": "all"
+    }
+  ],
+  "7": [
+    {
+      "Id": 149,
+      "PermissionType": {
+        "Id": 1,
+        "Name": "Can View"
+      },
+      "RoleId": 7,
+      "RoleName": "Citizen Developers",
+      "Value": "all"
+    },
+    {
+      "Id": 150,
+      "PermissionType": {
+        "Id": 2,
+        "Name": "Can Add"
+      },
+      "RoleId": 7,
+      "RoleName": "Citizen Developers",
+      "Value": "true"
+    },
+    {
+      "Id": 151,
+      "PermissionType": {
+        "Id": 3,
+        "Name": "Can Edit"
+      },
+      "RoleId": 7,
+      "RoleName": "Citizen Developers",
+      "Value": "all"
+    },
+    {
+      "Id": 152,
+      "PermissionType": {
+        "Id": 4,
+        "Name": "Can Delete"
+      },
+      "RoleId": 7,
+      "RoleName": "Citizen Developers",
+      "Value": "all"
+    }
+  ],
+  "5": [
+    {
+      "Id": 153,
+      "PermissionType": {
+        "Id": 1,
+        "Name": "Can View"
+      },
+      "RoleId": 5,
+      "RoleName": "Low-Code Engineer",
+      "Value": "all"
+    },
+    {
+      "Id": 154,
+      "PermissionType": {
+        "Id": 2,
+        "Name": "Can Add"
+      },
+      "RoleId": 5,
+      "RoleName": "Low-Code Engineer",
+      "Value": "true"
+    },
+    {
+      "Id": 155,
+      "PermissionType": {
+        "Id": 3,
+        "Name": "Can Edit"
+      },
+      "RoleId": 5,
+      "RoleName": "Low-Code Engineer",
+      "Value": "all"
+    },
+    {
+      "Id": 156,
+      "PermissionType": {
+        "Id": 4,
+        "Name": "Can Delete"
+      },
+      "RoleId": 5,
+      "RoleName": "Low-Code Engineer",
+      "Value": "all"
+    }
+  ]
+}
