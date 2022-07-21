@@ -1,0 +1,94 @@
+[
+  {
+    "Id": 8,
+    "UniqueId": "ef3381d9-e827-4c7f-8a6f-8b06d3591d72",
+    "EntityVersionId": 6,
+    "Name": "SentBy",
+    "Type": {
+      "Id": "EntityRef",
+      "Name": "Entity Reference",
+      "InputType": {
+        "Id": "EntityRef",
+        "Name": "Entity Reference",
+        "ValueType": "EntityRef",
+        "Length": 4
+      }
+    },
+    "EntityVersionRefId": 1,
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 1
+  },
+  {
+    "Id": 9,
+    "UniqueId": "7fbc84df-6b7d-4f18-b9fe-8e4edc5efff8",
+    "EntityVersionId": 6,
+    "Name": "SentTo",
+    "Type": {
+      "Id": "EntityRef",
+      "Name": "Entity Reference",
+      "InputType": {
+        "Id": "EntityRef",
+        "Name": "Entity Reference",
+        "ValueType": "EntityRef",
+        "Length": 4
+      }
+    },
+    "EntityVersionRefId": 1,
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 2
+  },
+  {
+    "Id": 10,
+    "UniqueId": "1e24f6fb-ac8c-444a-8bf3-53f7fefc29ca",
+    "EntityVersionId": 6,
+    "Name": "Body",
+    "Type": {
+      "Id": "LargeText",
+      "Name": "Large Text",
+      "InputType": {
+        "Id": "LargeText",
+        "Name": "Large Text",
+        "ValueType": "String",
+        "Length": 2147483647,
+        "Icon": "notes"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": false,
+    "IsSearchable": false,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 3
+  },
+  {
+    "Id": 11,
+    "UniqueId": "ccd0c500-4266-44c4-a899-7cd2d53f9421",
+    "EntityVersionId": 6,
+    "Name": "Subject",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": true,
+    "IsSearchable": true,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 4
+  }
+]
