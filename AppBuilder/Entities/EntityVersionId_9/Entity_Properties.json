@@ -1,0 +1,25 @@
+[
+  {
+    "Id": 14,
+    "UniqueId": "2d7ef550-5fbb-40fd-a928-06fd37c8f24d",
+    "EntityVersionId": 9,
+    "Name": "Name",
+    "Type": {
+      "Id": "Text",
+      "Name": "Text",
+      "InputType": {
+        "Id": "Text",
+        "Name": "Text",
+        "ValueType": "String",
+        "Length": 450,
+        "Icon": "short_text"
+      }
+    },
+    "IsDeleted": false,
+    "IsRequired": true,
+    "IsSearchable": true,
+    "IsFilterable": false,
+    "IsSortable": false,
+    "OrderIndex": 1
+  }
+]
