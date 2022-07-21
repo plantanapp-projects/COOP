@@ -1,0 +1,21 @@
+{
+  "id": 14,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "COOPTokens"
+  },
+  "name": "GetQuestion",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select Id, U.DisplayName as CreatedBy, Q.Title, Q.Description, FORMAT (Q.CreatedDate, 'dd/MM/yyyy, hh:mm:ss') as Date, Q.LastModifiedBy from app.Question Q\r\n inner join dbo.Users U on U.UserId = Q.CreatedBy\r\n WHERE Q.Id = '[QueryString:QuestionId]'\r\n \r\n \r\n \r\n \r\n \r\n \r\n ",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
