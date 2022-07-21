@@ -1,0 +1,22 @@
+{
+  "id": 47,
+  "namespace": {
+    "id": 2,
+    "portalId": 0,
+    "name": "QuestionTokens",
+    "description": "Question tokens"
+  },
+  "name": "AwardCrownButton",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select A.Id, U.DisplayName as Name,  \r\n   A.Body as Answer,\r\n   A.CreatedDate as Date,\r\n   UU.DisplayName as ModifiedBy,\r\n   A.LastModifiedDate as [Edited Date],\r\n   A.IsCorrect as Correct,\r\n   U.UserId,\r\n   count(DISTINCT AUV.UserId) as 'Votes'\r\n   FROM app.QuestionAnswerAnswer QAA\r\nleft join app.Answer A on A.Id = QAA.AnswerId\r\nleft join dbo.Users U on U.UserId = A.CreatedBy\r\nleft join dbo.Users UU on UU.UserId = A.LastModifiedBy\r\nleft join app.AnswerUserVotes AUV on AUV.AnswerId = QAA.AnswerId \r\n\r\nWHERE QAA.QuestionId = '[TknParams:QId]' AND A.IsCorrect !=''\r\nGROUP BY A.Body, A.CreatedDate, A.IsCorrect, U.DisplayName, Id, U.UserId, UU.DisplayName,LastModifiedDate\r\n",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
