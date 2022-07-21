@@ -1,0 +1,66 @@
+{
+  "Name": "MeetingSources",
+  "Description": "Returns the information of all Meeting Source records in JSON object format.",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 93,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Input": [
+    {
+      "Name": "RowLimit",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "number",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RowLimit is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadAllEntity.4aa27001-20c0-4891-990b-5fd6c8a3d33e",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "MeetingSources",
+        "RowLimit": "[RowLimit]"
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadAllEntityRecords",
+        "EntityIdentifier": "4aa27001-20c0-4891-990b-5fd6c8a3d33e"
+      }
+    },
+    {
+      "ActionType": "RawResponse",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Content": "{\"MeetingSources\" : [MeetingSources:json]}",
+        "Headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "IsEnabled": true,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.RawResponse"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
