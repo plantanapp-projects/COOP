@@ -1,0 +1,21 @@
+{
+  "id": 20,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "COOPTokens"
+  },
+  "name": "GetProjectDetail",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "declare @projectId INT = '[TknParams:projectId]'\r\n\r\nselect\r\nP.Id,\r\nP.Title,\r\nP.Description,\r\nFORMAT (P.CreatedDate, 'dd/MM/yyyy') as CreatedDate,\r\nU.DisplayName as CreatedBy,\r\nFORMAT (P.LastModifiedDate, 'dd/MM/yyyy') as LastModifiedDate,\r\nUU.DisplayName as LastModifiedBy\r\nfrom app.Project P\r\nleft JOIN app.ProjectProjectChangeChanges PPCC ON P.Id = PPCC.ProjectId\r\nleft join dbo.Users U on U.UserId = P.CreatedBy\r\nleft join dbo.Users UU on UU.UserId = P.LastModifiedBy\r\nWHERE P.Id = @projectId\r\nGroup By\r\nP.Id,\r\nP.Title,\r\nP.Description,\r\nP.CreatedDate,\r\nP.LastModifiedDate,\r\nU.DisplayName,\r\nUU.DisplayName",
+    "defaultColumn": "",
+    "columns": "Id\nTitle\nDescription\nCreatedDate\nLastModifiedDate\nDisplayName\nCreatedBy\nLastModifiedBy",
+    "connectionString": "",
+    "type": "db"
+  }
+}
