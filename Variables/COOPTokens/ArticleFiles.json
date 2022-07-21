@@ -1,0 +1,21 @@
+{
+  "id": 39,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "COOPTokens"
+  },
+  "name": "ArticleFiles",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "0",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select F.FileName, F.FileId from app.ArticleDocumentFiles ADF\r\nleft join app.Article A on A.Id = ADF.ArticleId\r\ninner join dbo.Files F on ADF.DocumentId = F.FileId\r\nleft join app.ArticleChangeDocumentFiles ACDF on ACDF.DocumentId = F.FileId\r\nwhere A.Id = '[TknParams:ArticleId=-1]' or ACDF.ArticleChangeId = '[TknParams:ArticleChangeId=-1]'",
+    "defaultColumn": "",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
