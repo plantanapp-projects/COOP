@@ -1,0 +1,21 @@
+{
+  "id": 28,
+  "namespace": {
+    "id": 1,
+    "portalId": 0,
+    "name": "COOPTokens"
+  },
+  "name": "ShowLessContentPlaylist",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "language": "csharp",
+    "compiledRazorLocation": "host",
+    "additionalAssemblies": "",
+    "debug": false,
+    "type": "razor"
+  }
+}
