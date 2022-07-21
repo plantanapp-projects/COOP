@@ -1,0 +1,93 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+@{
+ var Categories = COOPTokens.CategoryTypes();
+}
+
+    <h1>
+        Choose a Category
+    </h1>
+
+<div class="cat-wrapper">
+    
+
+    @foreach(var n in Categories) {
+    
+     <a class="cat-item" href="/Articles/AllArticles?filter-ArticleType=@n.Name">
+       	<div class="cat__item" >
+      		<p>@n.Name</p>
+      	</div>
+     </a>
+    
+    }
+    
+   <!-- <a class="cat-item" href="https://coopv2.apps.plantanapp.com/CG/Articles">-->
+   <!--	    <div class="cat__item">-->
+  	<!--        <p>All Articles</p>-->
+  	<!--    </div>-->
+  	<!--</a>-->
+  	
+</div>
+
+<style>
+  
+  h1 {
+      position: relative;
+      width: 450px;
+      text-align:center;
+      margin: 6vh auto;
+      color: #22577e !important;
+  }
+  
+  h1:after {
+      position: absolute;
+      content: "";
+      border-bottom: 2px solid #22577e !important;
+      bottom: 0;
+      width: 450px;
+      margin-left: -367px;
+      transition: all 1s;
+  }
+  
+  h1:hover:after {
+      transform: scaleX(1.2);
+      color: #22577e !important;
+  }
+  
+  .cat-wrapper {
+      display: flex;
+      justify-content: center;        
+      grid-gap: 20px; 
+      margin: 0 auto;
+      padding: 1rem;
+      width: 560px;
+  }
+  
+  .cat-item{
+    justify-self: center;
+    border-radius: 15px;
+    background-color: #22577e;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  
+  .cat-item:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: #22577e;
+  }
+  
+  .cat__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 200px;
+    color: white;
+  }
+  
+  p { 
+      
+      margin: 0;
+  }
+  
+</style>
